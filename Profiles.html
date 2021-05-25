@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./asset/css/css_homemade.css">
+    <title>Profiles | Good</title>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <!--Content-->
+        <div class="container-fluid">
+            <!--Brand-->
+            <a href="#" class="navbar-brand topnav-centered"><img width="80" height="50" src="./asset//Photo/stem04.png" alt=""></a>
+            <!--Menu-->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarToggle">
+                <ul class="navbar-nav">
+                    <br><li class="nav-item"><a class="nav-link" href="Main.html">Welcome</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Preface.html">Preface</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Profiles.html">Profiles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Education</a></li>
+                    <li class="nav-item"><a class="nav-link " href="#">Activity & Certificate</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Open page-->
+    <div class="magicText">
+        <h1 style="margin-top: 2rem;" class="PageHeader">Profiles</h1>
+    </div>
+
+    <!--Info-->
+    <div class="container">
+        <img src="./asset/Photo/me.jpg" alt="Good" class="image" style="width:100%">
+        <div class="middle">
+            <button onclick="show()" id="showmore" class="text">Show more!</button>
+        </div>
+    </div>
+    <div style="text-align: center; color: whitesmoke; margin-top: 2.5rem;" id="showThis">
+        <h1>Phawatis Klinsreesuk</h1>
+        <h1>นายปวริศร์  กลิ่นศรีสุข</h1>
+    </div>
+
+    <!--End Button-->
+    <div  class="PageHeader">
+        <button class="ButtonOptions magicText">
+            <h3 onclick="warp('Preface.html')" id="TextToWarp" style="margin-top: 4rem;">Back</h3>
+        </button>
+        <button class="ButtonOptions magicText">
+            <h3 onclick="warp('#.html')" id="TextToWarp" style="margin-top: 4rem;">Next</h3>
+        </button>
+    </div>
+
+    <script src="./asset/js/js_homemade.js"></script>
+    <script src="./asset/js/bootstrap.js"></script>
+</body>
+</html>
