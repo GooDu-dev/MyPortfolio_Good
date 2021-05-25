@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(29, 29, 29);
+}
+
+.PageHeader{
+    position: relative;
+    width: 99vw;
+    height: auto; 
+    text-align: center; 
+    font-size: 60px;
+}
+
+.magicText{
+    font-family: 'Chela One', cursive;
+    animation : swapColor 0.5s ease-in-out infinite;
+    text-align: center;
+}
+
+.ButtonOptions{
+    background-color: rgb(29,29,29);
+    border: 0px; 
+}
+
+.textBox{
+    font-size: 24px;
+    font-family: 'Itim', cursive;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    height: auto;
+    border: 2px solid pink;
+    background-color: rgb(83, 82, 82);
+    text-align: center;
+}
+
+.textBoxp{
+    margin-left: 28vw; 
+    width: 20vw;
+    text-align: center;
+}
+
+/*Profiles*/
+.container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.container:hover .image {
+    opacity: 0.3;
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes swapColor {
+    0%, 100% {
+        color :aquamarine;
+    }
+    20% {
+        color:aqua;
+    }
+    40%{
+        color:deepskyblue;
+    }
+    60% {
+        color:dodgerblue;
+    }
+    80% {
+        color:lightskyblue;
+    }
+}
+
+@keyframes imageAnimation {
+    0%, 100% {
+        color :aquamarine;
+    }
+    20% {
+        color:aqua;
+    }
+    40%{
+        color:deepskyblue;
+    }
+    60% {
+        color:dodgerblue;
+    }
+    80% {
+        color:lightskyblue;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .textBox{
+        font-size: 24px;
+        font-family: 'Itim', cursive;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85vw;
+        height: auto;
+        border: 2px solid pink;
+        background-color: rgb(83, 82, 82);
+        text-align: center;
+    }
+    .textBoxp{
+        margin-left: 29vw; 
+        width: 60vw;
+        text-align: center;
+    }
+}
