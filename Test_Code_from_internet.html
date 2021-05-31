@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST2</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        .box{
+            position: relative;
+            top: 10rem;
+            margin: auto;
+            width: 800px;
+            height: 500px;
+            background-color: red;
+        }
+        .stick{
+            position: absolute;
+            width: 50px;
+            height: 10px;
+            background-color: white;
+        }
+        .stick.delay{
+            animation-delay: 1s;
+        }
+        .topAnimate{
+            animation: aniTop 2s infinite;
+        }
+        @keyframes aniTop{
+            0%{
+                left: 0;
+            }
+            80%{
+                opacity: 1;
+            }
+            99%{
+                left: 800px;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        .leftAnimate{
+            animation: aniLeft 2s infinite;
+            transform: rotate(90deg);
+        }
+        @keyframes aniLeft{
+            0%{
+                top: 0;
+            }
+            80%{
+                opacity: 1;
+            }
+            99%{
+                top: 470px;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        .btm{
+            animation: aniTop 2s infinite;
+            top: 500px;
+        }
+        .right{
+            left: 800px;
+            animation: aniLeft 2s infinite;
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <div class="box">
+            <div class="stick topAnimate"></div>
+            <div class="stick leftAnimate"></div>
+            <div class="stick topAnimate btm delay"></div>
+            <div class="stick leftAnimate right delay"></div>
+    </div>
+</body>
+</html>
