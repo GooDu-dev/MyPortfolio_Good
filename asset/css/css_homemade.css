@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0px;
+}
+body{
+    text-align: center;
+}
+
+.portText{
+    text-align: center; 
+    margin-top: 50vh; 
+    margin-left: auto; 
+    margin-right: auto;
+    font-size: 108px; 
+    visibility: hidden;
+}
+
+.OpenImage{
+    visibility: hidden; 
+    border: 10px solid white; 
+    border-radius: 50px; 
+    overflow: hidden; 
+    max-width: 800px;
+    height: auto;
+    text-align: center; 
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.OpenImage img{
+    max-width: 80vw;
+}
+
+.profileImgPos1{
+    visibility: hidden; /*Hidden*/ 
+    position: absolute;
+    max-width: 100%;
+    width: 405px;
+    top: 73.8vh;
+    left: 44vw;
+}
+
+.profileImgPos2{
+    transition: 1.5s;
+    max-width: 100%;
+    width: 600px;
+    top: 175vh;
+    left: 5vw;
+}
+
+.FadeUp{
+    visibility: visible;
+    animation: fadeUp 1s;
+}
+
+.FadeDown{
+    visibility: visible;
+    animation: fadeDown 1s;
+}
+
+.FadeLeft{
+    visibility: visible;
+    animation: fadeLeft 1s;
+}
+
+.FadeRight{
+    visibility: visible;
+    animation: fadeRight 1s;
+}
+
+.fadeChangePicture1{
+    animation: fade-out-reverse 1s;
+}
+.fadeChangePicture2{
+    animation: fade-in-reverse 1s;
+}
+
+.generalInfo{
+    display: flex;
+    align-items: center;
+    margin-top: 38vh;
+    margin-left: 50vw;
+    border: 10px solid #000058;
+    flex-direction: column;
+    width: 45vw;
+    height: auto;
+    background-color: #000072;
+    color: floralwhite;
+    text-shadow: 0px 2.5px 50px floralwhite;
+    border-radius: 25px;
+}
+
+.generalInfo h3{
+    /*border: 5px solid gray;*/
+    padding-top: 1rem;
+    float: right;
+    font-size: 72px;
+    width: auto;
+}
+
+.generalInfo p{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    /*border: 5px solid pink;*/
+    font-size: 32px;
+    list-style: none;
+    width: auto;
+}
+
+.bar{
+    position: absolute;
+    width: 200px;
+    height: 20px;
+    background-color: #000058;
+    box-shadow: 0px 2.5px 50px #000058;
+    border-radius: 25px;
+}
+.topbar{
+    top: 1772px;
+    animation: aniTop 0.75s infinite;
+}
+.leftbar{
+    left: 737px;
+    animation: aniLeft 0.75s infinite;
+    transform: rotate(90deg);
+}
+.rightbar{
+    left: 1476px;
+    animation: aniRight 0.75s infinite;
+    transform: rotate(90deg);
+}
+.btmbar{
+    top: 2692px;
+    animation: aniBtm 0.75s infinite;
+}
+
+@keyframes aniTop{
+    0%{
+        left: 815px;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        left: 1385px;
+    }
+}
+
+@keyframes aniBtm{
+    0%{
+        left: 1385px;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        left: 830px;
+        opacity: 0;
+        
+    }
+}
+
+@keyframes aniRight{
+    0%{
+        top: 1850px;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top: 2580px;
+    }
+}
+
+@keyframes aniLeft{
+    0%{
+        top: 2580px;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top: 1860px;
+    }
+}
+
+
+@keyframes fade-out-reverse{
+    0%{
+        opacity: 1;
+        size: 100%;
+    }
+    100%{
+        opacity: 0;
+        size: 0%;
+    }
+}
+
+@keyframes fade-in-reverse {
+    0%{
+        opacity: 0;
+        size: 0%;
+    }
+    100%{
+        opacity: 1;
+        size: 100%;
+    }
+}
+
+@keyframes fadeLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(20%);
+        
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fadeRight {
+    0%{
+        opacity: 0;
+        transform: translateX(-2rem);
+        
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeUp {
+    0%{
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeDown {
+    0%{
+        opacity: 0;
+        transform: translateY(-5rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes swapColor {
+    0%, 100% {
+        color :aquamarine;
+    }
+    20% {
+        color:aqua;
+    }
+    40%{
+        color:deepskyblue;
+    }
+    60% {
+        color:dodgerblue;
+    }
+    80% {
+        color:lightskyblue;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+}
