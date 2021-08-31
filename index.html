@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-6">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <title>My Portfolio</title>
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="load"></div>
+    </div>
+
+    <!-- Navbar -->
+    <button id="toggle" onclick="toggleNavbar()" class="navbar-toggle"><img src="./asset/icon/setting-hamburger-handamde.png" alt=""></button>
+    <nav id="navbar">
+        <img id="logo" src="./asset/Photos/stem04.png" alt="">
+        <ul>
+            <li><a id="navHome" href="#home">Home</a></li>
+            <li><a id="navPro" href="#proflies">Profiles</a></li>
+            <li><a id="navHob" href="#hob">My Hobbies</a></li>
+            <li><a id="navAct" href="#act">Activities</a></li>
+            <li><a id="navCer" href="#certi">Certificate</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Page -->
+        <div id="home" class="box">
+            <img id="me" src="./asset/Photos/CIE_Edited2.png" alt="">
+            <div class="box-container">
+                <div  id="type-1" class="texttype texttyper">
+                    <span>Hello! This is my Portfolio.</span>
+                </div>
+                <div  id="type-2" style="animation-play-state: paused; visibility: hidden;" class="texttype texttyper">
+                    <span>This website doesn't use Booststrap.</span>
+                </div>
+                <div  id="type-3" style="animation-play-state: paused; visibility: hidden;" class="texttype texttyper">
+                    <span>I hope you'll enjoy this.</span>
+                </div>
+                <div id="press">
+                    PRESS ANY BUTTON
+                </div>
+                <div id="contract" class="contract">
+                    <a target="_blank" href="https://www.facebook.com/dofogoholy"><img src="./asset/icon/uicons-regular-rounded/png/facebook-circular-logo.png" alt=""></a>
+                    <a target="_blank" href="https://github.com/GooDu-dev"><img src="./asset/icon/uicons-regular-rounded/png/github.png" alt=""></a>
+                    <a target="_blank" href="https://www.instagram.com/good_pwr/"><img src="./asset/icon/uicons-regular-rounded/png/instagram.png" alt=""></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCHwUpTkCVcrAc0Fl2e6A73A"><img src="./asset/icon/uicons-regular-rounded/png/youtube.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+    <!-- Profiles -->
+    <div id="proflies" class="profiles">
+        <div id="typer" class="proHead type">Profiles</div>
+        <div class="description1">
+            <img id="proPhotos1" src="./asset/Photos/me.jpg" alt="">
+            <div id="text1" class="text1">
+                <table>
+                    <tr>
+                        <th>Name : </th>
+                        <td>Mr.Phawaris Klinsreesuk</td>
+                    </tr>
+                    <tr>
+                        <th>Nickname : </th>
+                        <td>Good</td>
+                    </tr>
+                    <tr>
+                        <th>School : </th>
+                        <td>Horwang</td>
+                    </tr>
+                    <tr>
+                        <th>Birthday : </th>
+                        <td>31 March 2004</td>
+                    </tr>
+                    <tr>
+                        <th>Nationality-Ethnicity: </th>
+                        <td>Thai-Thai</td>
+                    </tr>
+                    <tr>
+                        <th>Address : </th>
+                        <td>224/36 Semafakram Rd. Khukhot Sub-area Lumlukka Area Patumtani 12130 Thailand</td>
+                    </tr>
+                    <tr>
+                        <th>Hobby : </th>
+                        <td>Programming, Building a robot, watching some movies, listening to music, playing games, do a new project, listening to podcast</td>
+                    </tr>
+                    <tr>
+                        <th>Talents : </th>
+                        <td>HTML5, CSS, Javascript, create a game with Unity3D by using C#, C++, Python, Arduino, Math</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="description2">
+            <div id="text2" class="text2">
+                <table>
+                    <p>contract</p>
+                    <tr>
+                        <th>Facebook : </th>
+                        <td> good.klinsreesuk</td>
+                    </tr>
+                    <tr>
+                        <th>Line ID : </th>
+                        <td>ggoodd5544</td>
+                    </tr>
+                    <tr>
+                        <th>Instragram : </th>
+                        <td>good_pwr</td>
+                    </tr>
+                    <tr>
+                        <th>Email : </th>
+                        <td>good.klinsreesuk@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <th>Tel. : </th>
+                        <td>0952475696</td>
+                    </tr>
+                </table>
+                <hr>
+                <table>
+                    <tr>
+                        <th>Motto : </th>
+                        <td>Learn to be a creator not to be an user.</td>
+                    </tr>
+                    <tr>
+                        <th>My favorite person : </th>
+                        <td>Elon Reeve Musk, Timothy Donald Cook</td>
+                    </tr>
+                </table>
+            </div>
+            <img id="proPhotos2" src="./asset/Photos/Sport_day_01.jpg" alt="">
+        </div>
+    </div>
+
+    <!-- Hobby -->
+    <div id="hob" class="group-hob">
+        <div id="hobPos"></divi>
+        <h1 class="headhob">My Hobbies</h1>
+        <div class="filter">
+            <button id="all" class="active" onclick="showAll()">Show all</button>
+            <button id="uni" onclick="showUni()">Unity</button>
+            <button id="ar" onclick="showAr()">Arduino</button>
+            <button id="mb" onclick="showMb()">Microbit</button>
+        </div>
+        <div class="containerHob">
+            <div id="group-1" class="item" onmouseover="hobbyBoxHover('item-1', 'button-1')" onmouseout="hobbyBoxNormal('item-1', 'button-1')">
+                <img id="item-1"  src="./asset/Photos//Hobby/carParking.jpg" alt="">
+                <p id="text-1" class="text">This program is a car-parking cost counter but no if-else function.</p>
+                <button id="button-1" onclick="learnMore('group-1', 'item-1', 'button-1', 'text-1')">Learn More</button>
+            </div>
+            <div id="group-2" class="item" onmouseover="hobbyBoxHover('item-2', 'button-2')" onmouseout="hobbyBoxNormal('item-2', 'button-2')">
+                <img id="item-2"  src="./asset/Photos/Hobby/clock1.png" alt="">
+                <p id="text-2" class="text">This clock is made by using RTC Module and LCD screen Module I use Arduino Uno for learn how to make a digital-clock</p>
+                <button id="button-2" onclick="learnMore('group-2', 'item-2', 'button-2', 'text-2')">Learn More</button>
+            </div>
+            <div id="group-3" class="item" onmouseover="hobbyBoxHover('item-3', 'button-3')" onmouseout="hobbyBoxNormal('item-3', 'button-3')">
+                <img id="item-3"  src="./asset/Photos/Hobby/game1.png" alt="">
+                <p id="text-3" class="text">This game is made by Unity3D and I learnt about how to use post-processing in 3D game</p>
+                <button id="button-3" onclick="learnMore('group-3', 'item-3', 'button-3', 'text-3')">Learn More</button>
+            </div>
+            <div id="group-4" class="item" onmouseover="hobbyBoxHover('item-4', 'button-4')" onmouseout="hobbyBoxNormal('item-4', 'button-4')">
+                <img id="item-4"  src="./asset/Photos/Hobby/game2D1.png" alt="">
+                <p id="text-4" class="text">This is my first game that I made by Unity3D but it's a 2D game but I learnt about game's logical like attack system, how to control animation, Hp and Mp system and walk system</p>
+                <button id="button-4" onclick="learnMore('group-4', 'item-4', 'button-4', 'text-4')">Learn More</button>
+            </div>
+            <div id="group-5" class="item" onmouseover="hobbyBoxHover('item-5', 'button-5')" onmouseout="hobbyBoxNormal('item-5', 'button-5')">
+                <img id="item-5"  src="./asset/Photos/Hobby/gameOnMicrobit.jpg" alt="">
+                <p id="text-5" class="text">This is my final project for graduated from Cs Camp #13, organized by King Mongkut's Institute of Technology Ladkrabang student, I made a game on Microbit</p>
+                <button id="button-5" onclick="learnMore('group-5', 'item-5', 'button-5', 'text-5')">Learn More</button>
+            </div>
+            <div id="group-6" class="item" onmouseover="hobbyBoxHover('item-6', 'button-6')" onmouseout="hobbyBoxNormal('item-6', 'button-6')">
+                <img id="item-6"  src="./asset/Photos/Hobby/led1.png" alt="">
+                <p id="text-6" class="text">This is my first project with LCD screen module. I made a digital-clock with no RTC module but I always need to setting current time before use.</p>
+                <button id="button-6" onclick="learnMore('group-6', 'item-6', 'button-6', 'text-6')">Learn More</button>
+            </div>
+            <div id="group-7" class="item" onmouseover="hobbyBoxHover('item-7', 'button-7')" onmouseout="hobbyBoxNormal('item-7', 'button-7')">
+                <img id="item-7"  src="./asset/Photos/Hobby/R0.png" alt="">
+                <p id="text-7" class="text">I won a competition in Golden Robot Arm Camp in a team-competition.This is my first time that I using Arduino Uno too.</p>
+                <button id="button-7" onclick="learnMore('group-7', 'item-7', 'button-7', 'text-7')">Learn More</button>
+            </div>
+            <div id="group-8" class="item" onmouseover="hobbyBoxHover('item-8', 'button-8')" onmouseout="hobbyBoxNormal('item-8', 'button-8')">
+                <img id="item-8"  src="./asset/Photos/Hobby/arm1.png" alt="">
+                <p id="text-8" class="text">Automated Garbage Truck, it is our final project for graduated form secondary 4 at Horwang School, this is my first project that I did it after I learn Arduino for 2 months but I invented it for 1 year and 3 months</p>
+                <button id="button-8" onclick="learnMore('group-8', 'item-8', 'button-8', 'text-8')">Learn More</button>
+            </div>
+            <div id="group-9" class="item" onmouseover="hobbyBoxHover('item-9', 'button-9')" onmouseout="hobbyBoxNormal('item-9', 'button-9')">
+                <img id="item-9"  src="./asset/Photos/Hobby/bin1.png" alt="">
+                <p id="text-9" class="text">This is Automatic Bin. I invented it becuase my bin was broken down and I want to fix it and upgrade it for more comfortable.</p>
+                <button id="button-9" onclick="learnMore('group-9', 'item-9', 'button-9', 'text-9')">Learn More</button>
+            </div>
+            <div id="group-10" class="item" onmouseover="hobbyBoxHover('item-10', 'button-10')" onmouseout="hobbyBoxNormal('item-10', 'button-10')">
+                <img id="item-10"  src="./asset/Photos/Hobby/car1.png" alt="">
+                <p id="text-10" class="text">This is 1 piece of my Automatic Garbage Truck.It is a moving part of Automatic Garbage Truck.It can move my using gear motor and relay for controling wheel's direction</p>
+                <button id="button-10" onclick="learnMore('group-10', 'item-10', 'button-10', 'text-10')">Learn More</button>
+            </div>
+        </div>
+
+    <!-- Activity -->
+    <div id="act" class="Act">
+        <h1 id="headAct">My Activities</h1>
+        <div class="act-container">
+            <div class="ball-container">
+                <img src="./asset/Photos/PIM-Car/1.jpg" alt="">
+                <p>PIM YCP239 “ปั้นวิศวกรรุ่นใหม่ กับสายงานอาชีพวิศวกรรมการผลิตยานยนต์” I learnt about diesel engines and bensin engines that how they work and how to fix them when they was broken down but just a basic.</p>
+            </div>
+            <div class="ball-container">
+                <img src="./asset/Photos/PIM-digital/1.jpg" alt="">
+                <p>"PIM YCP243 “Digital & Engineering Camp : ค่ายสานฝันคนพันธุ์ดิจิตอล” This camp made me know to make a prototype by using Figma and they told be about a programmer's jobs</p>
+            </div>
+            <div class="ball-container">
+                <img src="./asset/Photos/Sport_day_01.jpg" alt="">
+                <p>Sport's Day, I learnt a lot from that day becuase I was a co-leader of my team and I have learnt about how to be a good leader, how to teach others, time-management and after this I am a self-confidence man and I surely that I was changed from myself to better myself</p>
+            </div>
+            <div class="ball-container">
+                <img src="./asset/Photos/me.jpg" alt="">
+                <p>This is a Pre CIE Camp#1, organized by King Mongkut's Institute of Technology Ladkrabang student, and this camp made me hacked myself, this camp make me know what I should be and what I really want to be.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificates -->
+    <div id="certi" class="certi">
+        <h1>Certificates</h1>
+        <div class="cer-container">
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/AiPim.png" alt="">
+                <p>Certificates that prove that I was joining PIM GCV68 “เจาะเส้นทางอาชีพผู้พัฒนาเทคโนโลยีปัญญาประดิษฐ์</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/borntodev.png" alt="">
+                <p>Certificates that prove that I was graduated from basic Javascript</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/CarPIM.jpg" alt="">
+                <p>Certificates that prove that I was joining PIM YCP239 “ปั้นวิศวกรรุ่นใหม่ กับสายงานอาชีพวิศวกรรมการผลิตยานยนต์” </p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/CESCA.jpg" alt="">
+                <p>Certificates that prove that I joined ค่าย CESCa#16 Online</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/CIE.jpg" alt="">
+                <p>Certificates that prove that I joined ค่าย Pre CIE Camp#1</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/Cigarrestes.JPG" alt="">
+                <p>Certificates prove that I was pass a test about resistance drug</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/digiEngineeer.jpg" alt="">
+                <p>Certificates that prove that I was joining "PIM YCP243 “Digital & Engineering Camp : ค่ายสานฝันคนพันธุ์ดิจิตอล”</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/FutureSkill.png" alt="">
+                <p>Certificates that prove that I was graduated from Upskill Python Programming and becomes a Developer</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/goldenRobot.jpg" alt="">
+                <p>Certificates that prove that I joined ค่าย Golden Robot Arm Camp</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/ONCEs.jpg" alt="">
+                <p>Certificates that prove that I was joining computer engineering's simulation</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/intensivecamp.jpg" alt="">
+                <p>Certificates that prove that I was joining ค่าย Intensive Camp</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/robotthaimooc.png" alt="">
+                <p>Certificates that prove that I was graduated from basic robot programming</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/ruksadindeng.jpg" alt="">
+                <p>Certificates  the seccond best a plastic-reduction video competition</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/stem.jpg" alt="">
+                <p>Certificates for prove my Automatic Garbage Truck</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/suankulanpEng.jpg" alt="">
+                <p>Certificates that prove that I was joining besic english that organized by Suankularb Wittayalai School</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/TestFromHome.jpg" alt="">
+                <p>Certificates prove that I was pass a test about math and physic</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/thewinnerEng.jpg" alt="">
+                <p>Certificates that prove that I was joining a portfollio's maker camp</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/minecraftCode.png" alt="">
+                <p>Certificates that prove that I was graduated from basic Minecraft programming</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/TNI.jpg" alt="">
+                <p>Certificates that prove that I was joining INNOVATOR JOURNEY WORKSHOP ;; THE  2nd SERIES</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/IMG_1098.JPG" alt="">
+                <p>Certificates prove that I was pass a test about Governance, Civil Society</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/Cscamp13.JPG" alt="">
+                <p>Certificates that prove that I joined Computer Science Camp 13 (CS Camp 13)</p>
+            </div>
+            <div class="cer-group">
+                <img src="./asset/certificates/Certificates/steam4innovation.PNG" alt="">
+                <p>Certificates that prove that I was graduated from STEAM4Innovator</p>
+            </div>
+        </div>
+        <div style="margin: 4rem; height: 100px;"></div>
+    </div>
+    
+</body>
+</html>
