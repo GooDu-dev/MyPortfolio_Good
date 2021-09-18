@@ -1,6 +1,6 @@
 var count =0;
 var Boolcount=true;
-
+sizeOp()
 window.onscroll = function(){
     navbar(),
     NavCheckPos(),
