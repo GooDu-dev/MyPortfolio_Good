@@ -1,0 +1,1327 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+@font-face {
+    font-family: pixel;
+    src: url(./asset/font/PressStart2P-vaV7.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    height: 5000px;
+    cursor: default;
+}
+body::-webkit-scrollbar{
+    display : none;
+}
+
+#loader{
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 1000px;
+    color: whitesmoke;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+#loader .load{
+    position: absolute;
+    background-color: transparent;
+    width: 10vw;
+    height: 10vw;
+    border: 5px solid whitesmoke;
+    animation: loadAni 4s linear infinite, loadColor 4s linear infinite;
+}
+@keyframes loadAni{
+    from{
+        transform:  rotate(0deg);
+    }
+    to{
+        transform:  rotate(360deg);
+    }
+}
+@keyframes loadColor{
+    0%, 100%{
+        box-shadow: 0px 0px 30px whitesmoke;
+    }
+    25%{
+        box-shadow: 0px 0px 30px lightsalmon;
+    }
+    50%{
+        box-shadow: 0px 0px 30px lightpink;
+    }
+    75%{
+        box-shadow: 0px 0px 30px lightblue;
+    }
+}
+
+.navbar-toggle{
+    position: fixed;
+    background-color: transparent;
+    border-color: transparent;
+    width: 50px;
+    padding: .5rem .5rem 0 0;
+    right: 0%;
+    z-index: 1;
+    display: none;
+}
+nav{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: transparent;
+    justify-content: space-between;
+    transition: .5s;
+    z-index: 3;
+}
+nav #logo{
+    padding: 14px 0px;
+    padding-left: 50px;
+    max-width: 140px;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 20px;
+}
+nav ul li{
+    display: flex;
+    margin: 14px 0px;
+    transition: 1.5s;
+}
+nav ul li:hover{
+    background-color: whitesmoke;
+}
+nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 24px;
+    padding: 14px 15px;
+    width: 100%;
+    transition: 0.75s;
+}
+nav ul li a:hover{
+    color: black;
+    text-shadow: 5px 5px 50px rgb(29, 34, 34);
+}
+nav ul li a.active{
+    background-color: whitesmoke;
+    font-weight: bolder;
+    color: black;
+    text-shadow: 5px 5px 50px rgb(29, 34, 34);
+}
+
+.home-container{
+    background-color: lightblue;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.home-container .content-container{
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    align-self: center;
+}
+.home-container .content-container .text{
+    text-align: center;
+    padding-bottom: 5vw;
+}
+.home-container .content-container .text h1{
+    font-size: 5vw;
+}
+.home-container .content-container .link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.home-container .content-container .link img{
+    width: 5vw;
+    height: 5vw;
+}
+.home-container .show-container{
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+}
+.home-container .show-container .img-show{
+    width: 10vw;
+    height: 10vw;
+    transition: .5s;
+}
+.home-container .show-container .img-show.show{
+    animation: show .5s forwards ease-in-out;
+}
+@keyframes show{
+    from{
+        opacity: .5;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.home-container .show-container .img-show.half-hide{
+    animation:  half-hide .5s forwards ease-in-out;
+}
+@keyframes half-hide{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: .5;
+    }
+}
+
+
+.profiles{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 10rem auto;
+}
+.profiles .proHead{
+    display: flex;
+    justify-self: start;
+    font-size: 120px;
+    font-style: italic;
+}
+.profiles .proHead.type{
+    font-family: 'Anonymous Pro', monospace;
+    font-style: normal;
+    width: 100%;
+    max-width: 540px;
+    overflow: hidden;
+    letter-spacing: 2px;
+    display: inline-block;
+    white-space: nowrap;
+    border-right: 4px solid black;
+    box-sizing: border-box;
+    animation: typing 2s steps(8,end) , blink .75s step-end infinite;
+    animation-play-state: paused, paused;
+}
+@keyframes typing{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 540px;
+    }
+}
+@keyframes blink {
+    0%, 50%, 100%{ 
+        border-color: transparent ;
+    }
+    25%, 75%{ 
+        border-color: black; 
+    }
+}
+.profiles .description1{
+    display: flex;
+    flex-grow: 2;
+    flex-direction: row;
+    justify-content: space-between;
+    animation-delay: 1s;
+}
+.profiles .description1 img{
+    margin-top: 5rem;
+    object-fit: cover;
+    object-position: 30%;
+    width: 400px;
+    height: auto;
+    border-radius: 25px;
+    overflow: hidden;
+    visibility: hidden;
+}
+.profiles .description1 .text1{
+    margin-top: 5rem;
+    padding-left: 5rem;
+    visibility: hidden;
+}
+.profiles .description1 .text1 h1{
+    font-size: 60px;
+}
+.profiles .description1 .text1 p{
+    font-size: 28px;
+}
+.profiles .description1 .text1 table tr{
+    padding: 20px;
+    font-family: 'Itim', cursive;
+}
+.profiles .description1 .text1 table tr th{
+    width: 200px;
+    text-align: end;
+    font-size: 25px;
+}
+.profiles .description1 .text1 table tr td{
+    padding: 10px;
+    font-size: 25px;
+}
+.profiles .description2{
+    display: flex;
+    flex-grow: 2;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    animation-delay: 1s;
+}
+.profiles .description2 img{
+    width: 500px;
+    height: auto;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-right: 5%;
+    margin-top: 2rem;
+    visibility: hidden;
+}
+.profiles .description2 .text2{
+    margin-top: 5rem;
+    visibility: hidden;
+}
+.profiles .description2 .text2 h1{
+    font-size: 60px;
+}
+.profiles .description2 .text2 p{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Itim', cursive;
+}
+.profiles .description2 .text2 table tr{
+    padding: 20px;
+    font-family: 'Itim', cursive;
+}
+.profiles .description2 .text2 table tr th{
+    width: 200px;
+    text-align: end;
+    font-size: 25px;
+}
+.profiles .description2 .text2 table tr td{
+    padding: 10px;
+    font-size: 25px;
+}
+@keyframes fadeFromLeft{
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes fadeFromRight{
+    from{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes fadeFromTop{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes fadeFromBottom{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.timeline-container{
+    width: 100%;
+    position: relative;
+    margin-top: 2rem;
+}
+.timeline-container .act-header{
+    width: 80%;
+    display: flex;
+    justify-content: end;
+    margin: 0 auto;
+    position: relative;
+}
+.timeline-container .act-header h2{
+    font-size: 5vw;
+    position: relative;
+    
+}
+.timeline-container .act-header h2::after{
+    content: "";
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+}
+@keyframes borderplus{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+.timeline-container .timeline-block{
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    padding: 8vw 0;
+}
+.timeline-container .timeline-block.left{
+    transform: translateX(calc(-50% + 5px));
+    flex-direction: row-reverse;
+    border-right: 5px solid black;
+}
+.timeline-container .timeline-block.right{
+    flex-direction: row;
+    transform: translateX(50%);
+    border-left: 5px solid black;
+}
+.timeline-container .timeline-block .icon{
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 100%;
+    padding: .5rem;
+    position: absolute;
+}
+.timeline-container .timeline-block.left .icon{
+    right: 0;
+    transform: translate(calc(50% + 2.5px), -100%);
+}
+.timeline-container .timeline-block.right .icon{
+    left: 0;
+    transform: translate(calc(-50% - 2.5px), -100%);
+}
+.timeline-container .timeline-block .icon img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+}
+.timeline-container .timeline-block .image{
+    width: fit-content;
+    height: fit-content;
+    
+    position: absolute;
+    align-self: center;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.timeline-container .timeline-block.left .image{
+    transform: translateX(125%);
+}
+.timeline-container .timeline-block.right .image{
+    transform: translateX(-125%);
+}
+.timeline-container .timeline-block .image img{
+    width: 25vw;
+    height: 20vw;
+}
+.timeline-container .timeline-block .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    width: 80%;
+    margin: 0 auto;
+}
+.timeline-container .timeline-block .content h1.date{
+    font-size: 28px;
+}
+.timeline-container .timeline-block.left .content h1.date{
+    text-align: end;
+    align-self: flex-end;
+}
+.timeline-container .timeline-block.right .content h1.date{
+    text-align: start;
+    align-self: flex-start;
+}
+.timeline-container .timeline-block .content .camp-details{
+    padding: 2rem 0;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.timeline-container .timeline-block .content .camp-details p.header{
+    font-size: 30px;
+    text-align: center;
+}
+.timeline-container .timeline-block .content .camp-details p.details{
+    font-size: 24px;
+    text-align: center;
+}
+
+.counter-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.counter-container .main-project{
+    display: inherit;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50vw;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.counter-container .main-project img{
+    width: 10vw;
+    height: 10vw;
+}
+.counter-container .main-project .text{
+    display: flex;
+    flex-direction: row;
+}
+.counter-container .main-project .text p{
+    font-size: 3vw;
+    padding-bottom: 2vw;
+    padding: 1rem;
+    font-weight: bolder;
+}
+.counter-container .sub-project{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(1, auto);
+    justify-content: space-evenly;
+    align-items: center;
+    grid-gap: 5vw;
+}
+.counter-container .sub-project .counter-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.counter-container .sub-project .counter-item img{
+    width: 5vw;
+    height: 5vw;
+}
+.counter-container .sub-project .counter-item p{
+    font-size: 2vw;
+}
+.counter-container .sub-project .counter-item p.num-count{
+    padding: 1vw;
+}
+
+.group-hob{
+    background-color: #345da7;
+    position: relative;
+}
+.headhob{
+    font-family: pixel;
+    font-size: 80px;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    margin: 20px auto;
+    padding-top: 50px;
+    text-shadow: 0px 0px 50px whitesmoke;
+}
+.filter{
+    width: fit-content;
+    position: relative;
+    text-align: center;
+    margin: 2rem auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #4bb4de;
+    border-radius: 50px;
+}
+.filter p{
+    font-size: 3vw;
+    color: white;
+    padding: .5vw;
+    width: 15vw;
+    font-family: 'Itim', cursive;
+    
+}
+.filter p.active{
+    color: #f8d49b;
+    text-shadow: 0px 0px 50px #75bde0;
+    z-index: 1;
+}
+.filter #tab{
+    position: absolute;
+    background-color: #3b8ac4;
+    width: 15vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 25px;
+    transition: all .5s;
+}
+.containerHob{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 260px);
+    grid-template-rows: repeat(auto-fill, 250px);
+    grid-row-gap: 10px;
+    grid-column-gap: 2px;
+    justify-content: center;
+    align-content: center;
+    padding: 20px 0 4rem;
+    background-color: #345da7;
+    height: 70vw;
+    position: relative;
+    transition: all .25s;
+}
+.containerHob .item{
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    max-height:  250px;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: .75s;
+}
+.containerHob .item.activate{
+    max-width: 500px;
+    min-height: 500px;
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color:  whitesmoke;
+    justify-content: space-evenly;
+    align-content: center;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.containerHob .item button{
+    position:  absolute;
+    align-self: center;
+    padding: 10px;
+    font-size: 1.5vw;
+    border-radius: 10%;
+    background-color: whitesmoke;
+    visibility: hidden;
+    transition: .75s;
+    font-size: larger;
+    font-weight: bolder;
+}
+.containerHob .item button:hover{
+    color: black;
+    box-shadow: 0px 0px 20px #4bb4de;
+    text-shadow: 0px 0px 5px #c6cdff;
+    background-color: #93bbff;
+}
+.containerHob .item button.activate{
+    position: relative;
+}
+.containerHob .item img{
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    max-height: 250px;
+    transition: .5s;
+}
+.containerHob .item img:hover{
+    opacity: 0.2;
+}
+.containerHob .item img.activate{
+    opacity: 1 !important;
+    padding: 10px;
+    justify-self: center;
+    align-self: center;
+}
+.containerHob .item .text{
+    display: none;
+}
+.containerHob .item .text.activate{
+    display: flex;
+    text-align: center;
+    font-size: 1.5vw;
+    color: black;
+    padding: 1.5vw;
+    padding-top: 20px;
+}
+
+.hidecamp{
+    animation: hideCamp .75s forwards;
+}
+@keyframes hideCamp{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        display: none;
+    }
+}
+.showcamp{
+    display: flex !important;
+    animation: showCamp .75s forwards;
+}
+@keyframes showCamp{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.Act{
+    position: relative;
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 4rem 0;
+}
+.Act #headAct{
+    font-family: 'Tourney', cursive;
+    padding: 4rem;
+    text-align: center;
+    color: black;
+    text-shadow: 0px 0px 20px #13294B;
+    font-size: 100px;
+}
+.Act .act-container{
+    display: grid;
+    justify-content: space-around;
+    align-content: center;
+    grid-template-columns: repeat(2, auto);
+}
+.Act .act-container .ball-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    width: 100% !important;
+    max-width: 500px;
+}
+.Act .act-container .ball-container img{
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.Act .act-container .ball-container p{
+    margin: 20px;
+    font-size: 24px;
+    padding: 0;
+}
+.certi{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #13294B;
+}
+.certi h1{
+    font-size: 100px;
+    color: whitesmoke;
+    padding: 4rem;
+}
+.certi .cer-container{
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    justify-content: space-evenly;
+}
+.certi .cer-container .cer-group{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 500px;
+    margin-top: 2rem;
+}
+.certi .cer-container .cer-group img{
+    width: 500px;
+    height: auto;
+}
+.certi .cer-container .cer-group p{
+    font-size: 24px;
+    width: 500px;
+    padding-top: 2rem;
+    color: whitesmoke;
+}
+
+@media only screen and (max-width: 780px){
+    .navbar-toggle{
+        position: fixed;
+        background-color: transparent;
+        border-color: transparent;
+        width: 50px;
+        padding: .5rem .5rem 0 0;
+        right: 5vw;
+        z-index: 2;
+        display: initial;
+        transition: .5s;
+    }
+    .navbar-toggle img{
+        width: 10vw;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        background-color: #13294B;
+        transition: .75s;
+        height: 100%;
+        right: -200px;
+        width: 200px;
+        z-index: 1;
+    }
+    nav #logo{
+        margin-top: 2rem;
+        justify-self: center;
+        align-self: center;
+        max-width: 100px;
+        padding: .8rem;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    nav ul li{
+        text-align: center;
+        padding: 2rem .5rem;
+        list-style-type: none;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    .box{
+        background: rgb(224,139,255);
+        background: linear-gradient(90deg, rgba(224,139,255,1) 0%, rgba(194,240,255,1) 100%);
+        display: flex;
+        width: 100%;
+        height: fit-content;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+    .box #me{
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+    .box .contract{
+        width: 100%;
+        max-width: 250px;
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-around;
+        opacity: 1;
+        transition: .75s;
+        padding-bottom: 2rem;
+    }
+    .box .contract img{
+        width: 100%;
+        max-width: 50px;
+    }
+    .box .box-container{
+        width: 100%;
+        max-width: 780px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .box .box-container .texttype{
+        overflow: hidden;
+        width: 100%;
+        max-width: 780px;
+        letter-spacing: -5px !important;
+        font-family: 'Cutive Mono', monospace;
+        white-space: normal !important;
+        font-size: 5.5vw !important;
+        text-align: center;
+        visibility: visible !important;
+        border-right: none !important;
+        margin: 0;
+    }
+    .texttyper{
+        animation: none
+    }
+    .box .box-container .texttype#type-1{
+        max-width: 600px;
+        align-self: center;
+        justify-self: center;
+        visibility: visible !important;
+    }
+    .box .box-container .texttype#type-2{
+        visibility: visible !important;
+    }
+    .box .box-container .texttype#type-3{
+        max-width: 541px;
+        align-self: center;
+        justify-self: center;
+        visibility: visible !important;
+    }
+    .box .box-container #press{
+        padding-top: 20px;
+        font-family: 'Cutive Mono', monospace;
+        color: black;
+        font-size: 28px;
+        visibility: hidden;
+        text-align: center;
+        display: none !important;
+    }
+    .textblink{
+        animation: none
+    }
+    .profiles{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 10rem auto;
+    }
+    .profiles .proHead{
+        display: flex;
+        justify-self: center;
+        font-size: 80px;
+        font-style: italic;
+    }
+    .profiles .proHead.type{
+        font-family: 'Anonymous Pro', monospace;
+        font-style: normal;
+        width: 100%;
+        max-width: fit-content;
+        overflow: hidden;
+        letter-spacing: 2px;
+        border-right: 4px solid black;
+        animation: typing 2s steps(8,end) , blink .75s step-end infinite;
+    }
+    .profiles .description1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        animation-delay: 1s;
+    }
+    .profiles .description1 img{
+        margin-top: 5rem;
+        width: 100% !important;
+        max-width: 400px;
+        height: auto;
+        border-radius: 25px;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    .profiles .description1 .text1{
+        margin-top: 5rem;
+        padding-left: 0 !important;
+        visibility: hidden;
+    }
+    .profiles .description1 .text1 h1{
+        font-size: 40px;
+    }
+    .profiles .description1 .text1 p{
+        font-size: 14px;
+    }
+    .profiles .description1 .text1 table tr{
+        padding: 20px;
+        font-family: 'Itim', cursive;
+    }
+    .profiles .description1 .text1 table tr th{
+        width: 200px;
+        text-align: end;
+        font-size: 25px;
+    }
+    .profiles .description1 .text1 table tr td{
+        padding: 10px;
+        font-size: 25px;
+    }
+    .profiles .description2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        animation-delay: 1s;
+        margin: 0 auto;
+    }
+    .profiles .description2 img{
+        width: 100% !important;
+        max-width: 500px;
+        height: auto;
+        border-radius: 25px;
+        overflow: hidden;
+        margin-top: 2rem;
+        margin-right: 0 !important;
+        visibility: hidden;
+    }
+    .profiles .description2 .text2{
+        margin-top: 5rem;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .profiles .description2 .text2 p{
+        text-align: center;
+        font-size: 5vh;
+    }
+    .profiles .description2 .text2 hr{
+        width: 90%;
+        border-top: 1px solid black;
+    }
+    .profiles .description2 .text2 table tr{
+        padding: 20px;
+        font-family: 'Itim', cursive;
+    }
+    .profiles .description2 .text2 table tr th{
+        text-align: end;
+        font-size: 4vw;
+    }
+    .profiles .description2 .text2 table tr td{
+        padding: 10px;
+        font-size: 4vw;
+    }
+
+    .group-hob{
+        background-color: #13294B;
+        height: 650px;
+    }
+    .headhob{
+        font-family: pixel;
+        font-size: 10vw !important;
+        width: 100%;
+        text-align: center;
+        color: whitesmoke;
+        margin: 20px auto;
+        text-shadow: 0px 0px 50px whitesmoke;
+    }
+    .filter{
+        width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .filter button{
+        font-size: 16px !important;
+        padding: 15px;
+        border-radius: 15px;
+        border-color: whitesmoke;
+        background-color: transparent;
+        color: whitesmoke;
+        box-shadow: 0px 0px 10px whitesmoke;
+        font-weight: bolder;
+        transition: .75s;
+    }
+    .filter button:hover, .filter button.active{
+        background-color: whitesmoke;
+        box-shadow: 0px 0px 30px lightskyblue;
+        color: #13294B;
+    }
+    .containerHob{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 260px);
+        grid-template-rows: repeat(auto-fill, 250px);
+        grid-row-gap: 10px;
+        grid-column-gap: 2px;
+        justify-content: center;
+        align-content: center;
+        padding: 20px 0 4rem;
+        background-color: #13294B;
+        height: auto;
+    }
+    .containerHob .item{
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        max-height:  250px;
+        object-fit: cover;
+        object-position: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        transition: 1s;
+    }
+    .containerHob .item.activate{
+        max-width: 500px;
+        min-height: 500px;
+        grid-column: span 2;
+        grid-row: span 2;
+        background-color:  whitesmoke;
+        justify-content: flex-start;
+        align-content: center;
+        border-radius: 25px;
+        overflow: hidden;
+    }
+    .containerHob .item button{
+        position:  absolute;
+        align-self: center;
+        padding: 10px;
+        font-size: 28px;
+        border-radius: 10%;
+        background-color: whitesmoke;
+        visibility: hidden;
+        transition: .75s;
+        font-size: larger;
+        font-weight: bolder;
+    }
+    .containerHob .item button:hover{
+        box-shadow: 0px 0px 20px black;
+        text-shadow: 0px 0px 5px whitesmoke;
+        background-color: lightblue;
+    }
+    .containerHob .item button.activate{
+        bottom: 20px;
+    }
+    .containerHob .item img{
+        width: 100%;
+        max-width: 250px;
+        height: 100%;
+        max-height: 250px;
+        transition: .5s;
+    }
+    .containerHob .item img:hover{
+        opacity: 0.2;
+    }
+    .containerHob .item img.activate{
+        opacity: 1 !important;
+        padding: 10px;
+        justify-self: center;
+        align-self: center;
+    }
+    .containerHob .item .text{
+        display: none;
+    }
+    .containerHob .item .text.activate{
+        display: flex;
+        text-align: center;
+        font-size: 24px;
+        color: black;
+        padding: 40px;
+        padding-top: 20px;
+    }
+    
+    .Act{
+        position: relative;
+        background-color: whitesmoke;
+        width: 100%;
+        padding: 4rem 0;
+    }
+    .Act #headAct{
+        font-family: 'Tourney', cursive;
+        padding: 0;
+        text-align: center;
+        color: black;
+        text-shadow: 0px 0px 20px #13294B;
+        font-size: 60px;
+        margin-bottom: 2rem;
+    }
+    .Act .act-container{
+        display: flex ;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    .Act .act-container .ball-container{
+        width: 100%;
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    .Act .act-container .ball-container img{
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        overflow: hidden;
+    }
+    .Act .act-container .ball-container p{
+        text-align: center;
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        font-size: 5vw;  
+        margin: 0;
+        padding: 1rem 0;
+    }
+    .certi{
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #13294B;
+    }
+    .certi h1{
+        font-size: 60px;
+        color: whitesmoke;
+        padding: 2rem 0 0 0;
+    }
+    .certi .cer-container{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-evenly;
+    }
+    .certi .cer-container .cer-group{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        width: 100% !important;
+        max-width: 500px;
+        margin-top: 2rem;
+    }
+    .certi .cer-container .cer-group img{
+        width: 100% !important;
+        max-width: 500px;
+        height: auto;
+    }
+    .certi .cer-container .cer-group p{
+        font-size: 24px;
+        width: 100%;
+        max-width: 500px;
+        padding-top: 2rem;
+        color: whitesmoke;
+    }
+    
+    
+}   
+@media only screen and (max-width: 985px){
+    .Act .act-container{
+        display: grid;
+        justify-content: space-around;
+        align-content: center;
+        grid-template-columns: repeat(1, 500px);
+    }
+    /*Homeapge*/
+    /*Profiles and hobhead*/
+}
+@media only screen and (max-width: 1000px){
+    .certi .cer-container{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        justify-content: space-evenly;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .profiles .description1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation-delay: 1s;
+    }
+    .profiles .description1 img{
+        margin-top: 5rem;
+        object-fit: cover;
+        object-position: 30%;
+        width: 400px;
+        height: auto;
+        border-radius: 25px;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    .profiles .description2{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        animation-delay: 1s;
+    }
+    .profiles .description2 img{
+        width: 500px;
+        height: auto;
+        border-radius: 25px;
+        overflow: hidden;
+        margin-right: 5%;
+        margin-top: 2rem;
+        visibility: hidden;
+    }
+}
+@media only screen and (max-width: 1305px){
+    .box{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        justify-content: space-evenly;
+        align-items: space-evenly;
+    }
+    .box #me{
+        content : url("./asset/Photos/CIE_Edited.jpg");
+        position: relative;
+        width: 100%;
+        justify-self: center;
+        max-width: 500px;
+        margin-top: 4rem;
+        border-radius: 50px;
+        overflow: hidden;
+    }
+    .box .box-container{
+        width: 100%;
+        max-width: 1000px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    .box .box-container .texttype{
+        overflow: hidden;
+        width: 100%;
+        white-space: nowrap;
+        letter-spacing: -5px !important;
+        font-family: 'Cutive Mono', monospace;
+        color: black;
+        font-size: 44px;
+        border-right: 5px solid black;
+        text-align: center;
+        margin: 0 0 2rem;
+    }
+    .box .box-container .texttype#type-2{
+        max-width: inherit;
+        margin: 0 auto 2rem !important;
+    }
+}
