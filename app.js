@@ -29,11 +29,13 @@ function navbar(){
     var proPos = document.getElementById("proflies").offsetTop;
     var toggle = document.getElementById("toggle");
     if(prevY >= currentY){
-        nav.style.top = "0px";
-        toggle.style.right = "5vw"
-        nav.style.zIndex = "3";
         if(currentY >= proPos){
             nav.style.backgroundColor = "#13294B";
+        }
+        if(window.innerHeight <= 780){
+            toggle.style.right = "5%"
+            nav.style.transform = "translateX(0%)";
+            nav.style.top = "0px";
         }
     }
     else{
@@ -41,11 +43,23 @@ function navbar(){
             nav.style.top = "-120px";
         }
         else{
-            nav.style.transform = "translateX(-100%)";
-            toggle.style.right = "-100px";
+            toggle.style.right = "5%"
+            nav.style.transform = "translateX(0%)";
+            nav.style.top = "0px";
         }
     }
     prevY = currentY;
+}
+function toggleNavbar(){
+    var navbar = document.getElementById("navbar");
+    var toggle = document.getElementById("toggle");
+    if(Boolcount){
+            navbar.style.transform = "translateX(-100%)";
+    } 
+    else{
+        navbar.style.transform = "translateX(0%)";
+    }
+    Boolcount = !Boolcount;
 }
 function NavCheckPos(){
     var home = document.getElementById("navHome");
@@ -315,18 +329,6 @@ function activateBlock(n) {
         }, 187.5);
     }
 }
-function toggleNavbar(){
-    var navbar = document.getElementById("navbar");
-    var toggle = document.getElementById("toggle");
-    if(Boolcount){
-            navbar.style.transform = "translateX(-100%)";
-    } 
-    else{
-        navbar.style.transform = "translateX(0%)";
-    }
-    Boolcount = !Boolcount;
-}
-
 function easingNav(clicked){
     var currentclick = document.getElementById(clicked);
     var tab = document.getElementById("tab");
