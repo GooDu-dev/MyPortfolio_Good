@@ -368,19 +368,38 @@ function SkillCounter(){
     })
 }
 
-function showAllType(all_BLOCK){
+function showAllType(button_Activate ,all_BLOCK){
     var cer_blocks = document.querySelectorAll(all_BLOCK);
-    
+    let buttons = document.querySelectorAll(".options");
+    buttons.forEach(button => {
+        let button_id = button.getAttribute("id")
+        if(button_id == button_Activate){
+            button.classList.add("activate");
+        }
+        else{
+            button.classList.remove("activate");
+        }
+    })
     cer_blocks.forEach(block => {
         block.classList.remove("hidecamp");
         block.classList.add("showcamp");
         block.style.display = "flex";
     });
 }
-function showType(all_BLOCK, TYPE_1, TYPE_2){
-    var cer_blocks = document.querySelectorAll(all_BLOCK);
+function showType(button_Activate ,all_BLOCK, TYPE_1, TYPE_2){
+    let cer_blocks = document.querySelectorAll(all_BLOCK);
+    let buttons = document.querySelectorAll(".options");
+    buttons.forEach(button => {
+        let button_id = button.getAttribute("id")
+        if(button_id == button_Activate){
+            button.classList.add("activate");
+        }
+        else{
+            button.classList.remove("activate");
+        }
+    })
     cer_blocks.forEach(block => {
-        var type = block.getAttribute("type");
+        let type = block.getAttribute("type");
         block.classList.remove("showcamp");
         block.classList.add("hidecamp");
         block.style.display = "none";
@@ -396,20 +415,7 @@ function showType(all_BLOCK, TYPE_1, TYPE_2){
         }, 1);
     })
 }
-function checkAll(button){
-    var all = document.getElementById("car-all");
-    var race = document.getElementById("cer-race");
-    var code = document.getElementById("cer-code");
-    var sub = document.getElementById("cer-sub")
-    var camp = document.getElementById("cer-camp");
 
-    var button = document.getElementById(button);
-
-    all.classList.remove("activate");
-    race.classList.remove("activate");
-    code.classList.remove("activate");
-    sub.classList.remove("activate");
-    camp.classList.remove("activate");
-    
-    button.classList.add("activate");
+function Replace(url){
+    document.location.href =url;
 }

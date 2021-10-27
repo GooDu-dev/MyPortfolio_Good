@@ -656,6 +656,7 @@ nav .link-container .link:hover a h1::after{
     position: relative;
     display: flex;
     padding: 8vw 0;
+    height: fit-content;
 }
 .timeline-container .timeline-block.left{
     transform: translateX(calc(-50% + 5px));
@@ -730,7 +731,6 @@ nav .link-container .link:hover a h1::after{
 }
 .timeline-container .timeline-block .content .camp-details{
     padding: 2rem 0;
-    height: 20vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -785,16 +785,32 @@ nav .link-container .link:hover a h1::after{
     width: fit-content;
     padding: 5vw;
 }
-.cer-container .cer-content .cer-options h1{
+.cer-container .cer-content .cer-options .options{
     font-size: 2vw;
     width: 100%;
-    padding: 2vw 5vw;
+    margin: 2vw 5vw;
     text-align: center;
     font-weight: bold;
     font-family: 'Itim', cursive;
+    position: relative;
+    transition: .5s;
 }
-.cer-container .cer-content .cer-options h1:hover{
+.cer-container .cer-content .cer-options .options::after{
+    content: "";
+    width: 0;
+    height: 5px;
+    background-color: tomato;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+.cer-container .cer-content .cer-options .options:hover, .cer-container .cer-content .cer-options .options.activate{
+    color: tomato;
+}
+.cer-container .cer-content .cer-options .options:hover::after, .cer-container .cer-content .cer-options .options.activate::after{
+    content: "";
     cursor: pointer;
+    animation: borderplus .5s ease-in-out forwards;
 }
 .cer-container .cer-content .cer-show{
     display: grid;
@@ -824,6 +840,58 @@ nav .link-container .link:hover a h1::after{
     padding: 10px 0;
     font-size: 1.5vw;
     font-family: 'Itim', cursive;
+    
+}
+footer{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2vw;
+}
+footer .text{
+    display: flex;
+    flex-direction: column;
+}
+footer .text p{
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+}
+footer .text .language{
+    display: flex;
+    flex-direction: row;
+    margin: 1vw 0;
+}
+footer .text .language p{
+    padding: 0 2px;
+    transition: .5s;
+}
+footer .text .language p:hover{
+    color: red;
+}
+footer .link-warp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20%;
+}
+footer .link-warp img{
+    width: 2.5vw;
+    height: 2.5vw;
+}
+footer .link-warp img:hover{
+    animation: bouce .3s ease-in-out;
+}
+@keyframes bouce{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20%);
+    }
 }
 
 @media only screen and (max-width: 780px){
@@ -1447,7 +1515,6 @@ nav .link-container .link:hover a h1::after{
     }
     .timeline-container .timeline-block .content .camp-details{
         padding: 2rem 0;
-        height: 20vw;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -1500,12 +1567,12 @@ nav .link-container .link:hover a h1::after{
         justify-content: top;
         align-items: center;
         width: fit-content;
-        padding: 2vw;
+        padding: 0vw;
     }
     .cer-container .cer-content .cer-options h1{
-        font-size: 4vw;
+        font-size: 10vw;
         width: 100%;
-        padding: 2vw;
+        padding: 0vw;
         text-align: center;
         font-weight: bold;
         font-family: 'Itim', cursive;
@@ -1542,7 +1609,27 @@ nav .link-container .link:hover a h1::after{
         font-size: 2.5vw;
         font-family: 'Itim', cursive;
     }
-    
+    footer{
+        background-color: black;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 2vw;
+    }
+    footer .link-warp{
+        padding: 2vw;
+    }
+    footer .link-warp img{
+        width: 4vw;
+        height: 4vw;
+    }
+    footer .text p{
+        font-size: 3vw;
+    }
+    footer .text .language p{
+        font-size: 2.75vw;
+    }
     
 }   
 @media only screen and (max-width: 1100px){
