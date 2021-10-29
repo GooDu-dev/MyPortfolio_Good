@@ -544,7 +544,7 @@ nav .link-container .link:hover a h1::after{
     height: 40%;
 }
 .group-hob .containerHob .block.activate .content p{
-    font-size: 1.25vw;
+    font-size: 1.5vw;
     text-align: center;
     padding: 0 2.5vw;
     font-family: 'Itim', cursive;
@@ -585,9 +585,10 @@ nav .link-container .link:hover a h1::after{
 }
 .group-hob .containerHob .block.activate button{
     opacity: 1 !important;
-    top: 92%;
+    top: 95%;
     color: black;
     border: 2px solid black;
+    font-size: 1.25vw;
 }
 
 .hidecamp{
@@ -894,6 +895,220 @@ footer .link-warp img:hover{
     }
 }
 
+@media only screen and (max-width: 1100px){
+    .profiles .description1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation-delay: 1s;
+    }
+    .profiles .description1 img{
+        margin-top: 5rem;
+        object-fit: cover;
+        object-position: 30%;
+        width: 400px;
+        height: auto;
+        border-radius: 25px;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    .profiles .description2{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        animation-delay: 1s;
+    }
+    .profiles .description2 img{
+        width: 500px;
+        height: auto;
+        border-radius: 25px;
+        overflow: hidden;
+        margin-right: 5%;
+        margin-top: 2rem;
+        visibility: hidden;
+    }
+    .group-hob{
+        background-color: #345da7;
+        position: relative;
+    }
+    .headhob{
+        font-family: pixel;
+        font-size: 9vw;
+        width: 100%;
+        text-align: center;
+        color: whitesmoke;
+        margin: 20px auto;
+        padding-top: 50px;
+        text-shadow: 0px 0px 50px whitesmoke;
+    }
+    .filter{
+        width: fit-content;
+        position: relative;
+        text-align: center;
+        margin: 2rem auto 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: #4bb4de;
+        border-radius: 50px;
+    }
+    .filter p{
+        font-size: 3vw;
+        color: white;
+        padding: .5vw;
+        width: 15vw;
+        font-family: 'Itim', cursive;
+        
+    }
+    .filter p.active{
+        color: #f8d49b;
+        text-shadow: 0px 0px 50px #75bde0;
+        z-index: 1;
+    }
+    .filter #tab{
+        position: absolute;
+        background-color: #3b8ac4;
+        width: 15vw;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 25px;
+        transition: all .5s;
+    }
+    .group-hob .containerHob{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 35vw);
+        grid-template-rows: repeat(auto-fill, 35vw);
+        justify-content: space-evenly;
+        align-content: space-around;
+        padding: 2.5vw 0 5vw;
+        background-color: #345da7;
+        margin: 0 auto;
+        position: relative;
+        transition: all .25s;
+    }
+    .group-hob .containerHob .block{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        height: fit-content;
+        position: relative;
+        transition: .75s;
+        justify-self: center;
+        align-self: center;
+    }
+    .group-hob .containerHob .block::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 0%;
+        background-color: #3b8ac4;
+        transition: .25s;
+        border-radius: 20%;
+    }
+    .group-hob .containerHob .block:hover::after{
+        height: 100%;
+    }
+    .group-hob .containerHob .block.activate{
+        background-color: whitesmoke;
+        width: 55vw;
+        height: 55vw;
+        transition: .75s;
+        justify-content: center;
+        border-radius: 10%;
+    }
+    .group-hob .containerHob .block.activate::after{
+        content: "";
+        height: 0;
+    
+    }
+    .group-hob .containerHob .block.activate a{
+        display: flex;
+        flex-direction: column  ;
+        justify-content: center;
+        align-items: center;
+    }
+    .group-hob .containerHob .block img{
+        width: 35vw;
+        height: 35vw;
+        margin: 0 auto;
+        transition: .75s;
+        border-radius: 20%;
+    }
+    .group-hob .containerHob .block.activate img{
+        margin: 2vw auto;
+        transition: .75s;
+        object-fit: cover;
+        object-position: center;
+        width: 20vw;
+        height: 20vw;
+    }
+    .group-hob .containerHob .block .content{
+        display: none;
+    }
+    .group-hob .containerHob .block.activate .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+        align-items: top;
+        align-self: top;
+        height: 40%;
+    }
+    .group-hob .containerHob .block.activate .content p{
+        font-size: 2.5vw;
+        text-align: center;
+        padding: 0 2.5vw;
+        font-family: 'Itim', cursive;
+    }
+    .group-hob .containerHob .block.activate .content .link{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 40%;
+        margin: 1vw auto;
+    } 
+    .group-hob .containerHob .block.activate .content .link img{
+        width: 3.8vw;
+        height: 3.8vw;
+        margin: 0;
+    }
+    .group-hob .containerHob .block button{
+        position: absolute;
+        width: fit-content;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2vw;
+        padding: .5vw;
+        opacity: 0;
+        transition: .75s;
+        background-color: transparent;
+        color: white;
+        background-color: rgb(124, 168, 156);
+        border-radius: 15%;
+        z-index: 2;
+    }
+    .group-hob .containerHob .block button:hover{
+        box-shadow: 0px 0px 20px white;
+        border: white solid 2px;
+        background-color: rgb(225, 255, 247);
+        color: black;
+    }
+    .group-hob .containerHob .block.activate button{
+        opacity: 1 !important;
+        top: 95%;
+        color: black;
+        border: 2px solid black;
+        font-size: 2vw;
+    }
+}
+
 @media only screen and (max-width: 780px){
     .navbar-toggle{
         position: fixed;
@@ -1080,14 +1295,16 @@ footer .link-warp img:hover{
     }
     .profiles .description1{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         animation-delay: 1s;
     }
     .profiles .description1 img{
         margin-top: 5rem;
-        width: 100% !important;
-        max-width: 400px;
+        object-fit: cover;
+        object-position: 30%;
+        width: 400px;
         height: auto;
         border-radius: 25px;
         overflow: hidden;
@@ -1099,10 +1316,10 @@ footer .link-warp img:hover{
         visibility: hidden;
     }
     .profiles .description1 .text1 h1{
-        font-size: 40px;
+        font-size: 8vw;
     }
     .profiles .description1 .text1 p{
-        font-size: 14px;
+        font-size: 2vw;
     }
     .profiles .description1 .text1 table tr{
         padding: 20px;
@@ -1111,28 +1328,27 @@ footer .link-warp img:hover{
     .profiles .description1 .text1 table tr th{
         width: 200px;
         text-align: end;
-        font-size: 25px;
+        font-size: 4vw;
     }
     .profiles .description1 .text1 table tr td{
         padding: 10px;
-        font-size: 25px;
+        font-size: 4vw;
     }
     .profiles .description2{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         animation-delay: 1s;
-        margin: 0 auto;
     }
     .profiles .description2 img{
-        width: 100% !important;
-        max-width: 500px;
+        width: 500px;
         height: auto;
         border-radius: 25px;
         overflow: hidden;
+        margin-right: 5%;
         margin-top: 2rem;
-        margin-right: 0 !important;
         visibility: hidden;
     }
     .profiles .description2 .text2{
@@ -1250,12 +1466,11 @@ footer .link-warp img:hover{
         border-radius: 50px;
     }
     .filter p{
-        font-size: 3vw;
+        font-size: 3.5vw;
         color: white;
         padding: .5vw;
-        width: 15vw;
+        width: 18vw;
         font-family: 'Itim', cursive;
-        
     }
     .filter p.active{
         color: #f8d49b;
@@ -1265,7 +1480,7 @@ footer .link-warp img:hover{
     .filter #tab{
         position: absolute;
         background-color: #3b8ac4;
-        width: 15vw;
+        width: 18vw;
         height: 100%;
         top: 0;
         left: 0;
@@ -1273,25 +1488,23 @@ footer .link-warp img:hover{
         transition: all .5s;
     }
     .group-hob .containerHob{
-        width: 100%;
+        width: 80%;
         display: grid;
-        grid-template-columns: repeat(auto-fill, 20vw);
-        grid-template-rows: repeat(auto-fill, 20vw);
-        grid-row-gap: 2vw;
-        grid-column-gap: 1vw;
-        justify-content: center;
-        align-content: center;
+        grid-template-columns: repeat(auto-fill, 30vw);
+        grid-template-rows: repeat(auto-fill, 30vw);
+        justify-content: space-evenly;
+        align-content: space-around;
         padding: 2.5vw 0 5vw;
         background-color: #345da7;
-        height: fit-content;
+        margin: 0 auto;
         position: relative;
         transition: all .25s;
     }
     .group-hob .containerHob .block{
         display: flex;
         flex-direction: column;
-        width: 1qvw;
-        height: 15vw;
+        width: fit-content;
+        height: fit-content;
         position: relative;
         transition: .75s;
         justify-self: center;
@@ -1313,8 +1526,8 @@ footer .link-warp img:hover{
     }
     .group-hob .containerHob .block.activate{
         background-color: whitesmoke;
-        width: 35vw;
-        height: 38vw;
+        width: 55vw;
+        height: 55vw;
         transition: .75s;
         justify-content: center;
         border-radius: 10%;
@@ -1331,8 +1544,8 @@ footer .link-warp img:hover{
         align-items: center;
     }
     .group-hob .containerHob .block img{
-        width: 15vw;
-        height: 15vw;
+        width: 30vw;
+        height: 30vw;
         margin: 0 auto;
         transition: .75s;
         border-radius: 20%;
@@ -1355,7 +1568,7 @@ footer .link-warp img:hover{
         height: 40%;
     }
     .group-hob .containerHob .block.activate .content p{
-        font-size: 1.25vw;
+        font-size: 2.5vw;
         text-align: center;
         padding: 0 2.5vw;
         font-family: 'Itim', cursive;
@@ -1368,8 +1581,8 @@ footer .link-warp img:hover{
         margin: 1vw auto;
     } 
     .group-hob .containerHob .block.activate .content .link img{
-        width: 3vw;
-        height: 3vw;
+        width: 3.8vw;
+        height: 3.8vw;
         margin: 0;
     }
     .group-hob .containerHob .block button{
@@ -1378,7 +1591,7 @@ footer .link-warp img:hover{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 1.5vw;
+        font-size: 3vw;
         padding: .5vw;
         opacity: 0;
         transition: .75s;
@@ -1399,6 +1612,7 @@ footer .link-warp img:hover{
         top: 92%;
         color: black;
         border: 2px solid black;
+        font-size: 2.5vw;
     }
 
     .timeline-container{
@@ -1415,7 +1629,7 @@ footer .link-warp img:hover{
         padding: 2rem 0 2rem 0;
     }
     .timeline-container .act-header h2{
-        font-size: 5vw;
+        font-size: 10vw;
         position: relative;
         font-family: 'Itim', cursive;
     }
@@ -1437,21 +1651,24 @@ footer .link-warp img:hover{
         }
     }
     .timeline-container .timeline-block{
-        width: translateX(calc(50% - 5px));
+        width: 90%;
         margin: 0 auto;
         position: relative;
         display: flex;
         padding: 8vw 0;
+        height: fit-content;
     }
     .timeline-container .timeline-block.left{
-        transform: translateX(calc(-50% + 5px));
-        flex-direction: row-reverse;
-        border-right: 5px solid black;
+        transform: translateX(0);
+        flex-direction: column;
+        border-left: 5px solid black;
+        border-right: 0 solid transparent;
     }
     .timeline-container .timeline-block.right{
-        flex-direction: row;
-        transform: translateX(50%);
+        flex-direction: column;
+        transform: translateX(0);
         border-left: 5px solid black;
+        border-right: 0 solid transparent;
     }
     .timeline-container .timeline-block .icon{
         background-color: white;
@@ -1461,48 +1678,49 @@ footer .link-warp img:hover{
         position: absolute;
     }
     .timeline-container .timeline-block.left .icon{
-        right: 0;
-        transform: translate(calc(50% + 2.5px), -100%);
+        right: 100%;
+        transform: translate(calc(100% - 5px), -100%);
     }
     .timeline-container .timeline-block.right .icon{
         left: 0;
-        transform: translate(calc(-50% - 2.5px), -100%);
+        transform: translate(calc(0% - 5px), -100%);
     }
     .timeline-container .timeline-block .icon img{
-        width: 40px;
-        height: 40px;
+        width: 12vw;
+        height: 12vw;
         object-fit: cover;
         object-position: center;
     }
     .timeline-container .timeline-block .image{
         width: fit-content;
         height: fit-content;
-        position: absolute;
+        justify-self: center;
+        position: relative;
         align-self: center;
         border-radius: 2vw;
         overflow: hidden;
     }
     .timeline-container .timeline-block.left .image{
-        transform: translateX(125%);
+        transform: translateX(0);
     }
     .timeline-container .timeline-block.right .image{
-        transform: translateX(-125%);
+        transform: translateX(0);
     }
     .timeline-container .timeline-block .image img{
-        width: 35vw;
-        height: 30vw;
+        width: 40vw;
+        height: 40vw;
     }
     .timeline-container .timeline-block .content{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 2rem 0;
-        width:  80%;
+        padding: 2vw 0;
+        width: 80%;
         margin: 0 auto;
     }
     .timeline-container .timeline-block .content h1.date{
-        font-size: 3vw;
+        font-size: 5vw;
         font-family: 'Itim', cursive;
     }
     .timeline-container .timeline-block.left .content h1.date{
@@ -1510,24 +1728,25 @@ footer .link-warp img:hover{
         align-self: flex-end;
     }
     .timeline-container .timeline-block.right .content h1.date{
-        text-align: start;
-        align-self: flex-start;
+        text-align: end;
+        align-self: flex-end;
     }
     .timeline-container .timeline-block .content .camp-details{
-        padding: 2rem 0;
+        padding: 2vw 0;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
     }
     .timeline-container .timeline-block .content .camp-details p.header{
-        font-size: 3vw;
+        font-size: 7vw;
         text-align: center;
         font-family: 'Itim', cursive;
     }
     .timeline-container .timeline-block .content .camp-details p.details{
-        font-size: 2vw;
+        font-size: 4vw;
         text-align: center;
         font-family: 'Itim', cursive;
+        border-top: 2.5px solid black;
     }
 
     .cer-container{ 
@@ -1539,7 +1758,7 @@ footer .link-warp img:hover{
         flex-direction: column;
     }
     .cer-container .cer-header{
-        font-size: 10vw;
+        font-size: 8vw;
         width: fit-content;
         position: relative;
         align-self: flex-end;
@@ -1567,18 +1786,34 @@ footer .link-warp img:hover{
         justify-content: top;
         align-items: center;
         width: fit-content;
-        padding: 0vw;
+        padding: 5vw;
     }
-    .cer-container .cer-content .cer-options h1{
-        font-size: 10vw;
+    .cer-container .cer-content .cer-options .options{
+        font-size: 3vw;
         width: 100%;
-        padding: 0vw;
+        margin: 2vw 2vw;
         text-align: center;
         font-weight: bold;
         font-family: 'Itim', cursive;
+        position: relative;
+        transition: .5s;
     }
-    .cer-container .cer-content .cer-options h1:hover{
+    .cer-container .cer-content .cer-options .options::after{
+        content: "";
+        width: 0;
+        height: 5px;
+        background-color: tomato;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+    }
+    .cer-container .cer-content .cer-options .options:hover, .cer-container .cer-content .cer-options .options.activate{
+        color: tomato;
+    }
+    .cer-container .cer-content .cer-options .options:hover::after, .cer-container .cer-content .cer-options .options.activate::after{
+        content: "";
         cursor: pointer;
+        animation: borderplus .5s ease-in-out forwards;
     }
     .cer-container .cer-content .cer-show{
         display: grid;
@@ -1600,14 +1835,15 @@ footer .link-warp img:hover{
         display: flex;
     }
     .cer-container .cer-content .cer-show .cer-block img{
-        width: 25vw;
+        width: 35vw;
         height: auto;
     }
     .cer-container .cer-content .cer-show .cer-block p{
         width: 30vw;
         padding: 10px 0;
-        font-size: 2.5vw;
+        font-size: 3vw;
         font-family: 'Itim', cursive;
+        
     }
     footer{
         background-color: black;
@@ -1632,39 +1868,296 @@ footer .link-warp img:hover{
     }
     
 }   
-@media only screen and (max-width: 1100px){
-    .profiles .description1{
+
+@media only screen and (max-width: 650px){
+    table th{
+        font-size: 2vw;
+    }
+    table td{
+        font-size: 2vw;
+    }
+    #motto{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        animation-delay: 1s;
     }
-    .profiles .description1 img{
-        margin-top: 5rem;
-        object-fit: cover;
-        object-position: 30%;
-        width: 400px;
-        height: auto;
-        border-radius: 25px;
-        overflow: hidden;
-        visibility: hidden;
+    #motto tr{
+        display: flex;
+        flex-direction: column;
+        padding: 2vw;
     }
-    .profiles .description2{
+    .group-hob{
+        background-color: #345da7;
+        position: relative;
+    }
+    .headhob{
+        font-family: pixel;
+        font-size: 9vw;
+        width: 100%;
+        text-align: center;
+        color: whitesmoke;
+        margin: 20px auto;
+        padding-top: 50px;
+        text-shadow: 0px 0px 50px whitesmoke;
+    }
+    .filter{
+        width: fit-content;
+        position: relative;
+        text-align: center;
+        margin: 2rem auto 0;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: #4bb4de;
+        border-radius: 50px;
+    }
+    .filter p{
+        font-size: 3vw;
+        color: white;
+        padding: .5vw;
+        width: 15vw;
+        font-family: 'Itim', cursive;
+        
+    }
+    .filter p.active{
+        color: #f8d49b;
+        text-shadow: 0px 0px 50px #75bde0;
+        z-index: 1;
+    }
+    .filter #tab{
+        position: absolute;
+        background-color: #3b8ac4;
+        width: 15vw;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 25px;
+        transition: all .5s;
+    }
+    .group-hob .containerHob{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 50vw);
+        grid-template-rows: repeat(auto-fill, 50vw);
+        grid-auto-rows: 1fr;
+        justify-content: space-evenly;
+        align-content: center;
+        padding: 2.5vw 0 5vw;
+        background-color: #345da7;
+        margin: 0 auto;
+        position: relative;
+        transition: all .25s;
+    }
+    .group-hob .containerHob .block{
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        height: 50vw;
+        position: relative;
+        transition: .75s;
+        justify-self: center;
+        align-self: center;
+    }
+    .group-hob .containerHob .block::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 0%;
+        background-color: #3b8ac4;
+        transition: .25s;
+        border-radius: 20%;
+    }
+    .group-hob .containerHob .block:hover::after{
+        height: 100%;
+    }
+    .group-hob .containerHob .block.activate{
+        background-color: whitesmoke;
+        width: 80vw;
+        height: 80vw;
+        transition: .75s;
+        justify-content: center;
+        border-radius: 10%;
+    }
+    .group-hob .containerHob .block.activate::after{
+        content: "";
+        height: 0;
+    
+    }
+    .group-hob .containerHob .block.activate a{
+        display: flex;
+        flex-direction: column  ;
         justify-content: center;
         align-items: center;
-        animation-delay: 1s;
     }
-    .profiles .description2 img{
-        width: 500px;
-        height: auto;
+    .group-hob .containerHob .block img{
+        width: 50vw;
+        height: 50vw;
+        margin: 0 auto;
+        transition: .75s;
+        border-radius: 20%;
+    }
+    .group-hob .containerHob .block.activate img{
+        margin: 2vw auto;
+        transition: .75s;
+        object-fit: cover;
+        object-position: center;
+        width: 40vw;
+        height: 40vw;
+    }
+    .group-hob .containerHob .block .content{
+        display: none;
+    }
+    .group-hob .containerHob .block.activate .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+        align-items: top;
+        align-self: top;
+        height: 40%;
+    }
+    .group-hob .containerHob .block.activate .content p{
+        font-size: 3.25vw;
+        text-align: center;
+        padding: 0 2.5vw;
+        font-family: 'Itim', cursive;
+    }
+    .group-hob .containerHob .block.activate .content .link{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 40%;
+        margin: 1vw auto;
+    } 
+    .group-hob .containerHob .block.activate .content .link img{
+        width: 5vw;
+        height: 5vw;
+        margin: 0;
+    }
+    .group-hob .containerHob .block button{
+        position: absolute;
+        width: fit-content;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5vw;
+        padding: .5vw;
+        opacity: 0;
+        transition: .75s;
+        background-color: transparent;
+        color: white;
+        background-color: rgb(124, 168, 156);
+        border-radius: 15%;
+        z-index: 2;
+    }
+    .group-hob .containerHob .block button:hover{
+        box-shadow: 0px 0px 20px white;
+        border: white solid 2px;
+        background-color: rgb(225, 255, 247);
+        color: black;
+    }
+    .group-hob .containerHob .block.activate button{
+        opacity: 1 !important;
+        top: 95%;
+        color: black;
+        border: 2px solid black;
+        font-size: 3.5vw;
+    }
+    .cer-container{ 
+        width: 100%;
+        position: relative;
+        background-color: whitesmoke;
+        padding: 5vw 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .cer-container .cer-header{
+        font-size: 8vw;
+        width: fit-content;
+        position: relative;
+        align-self: flex-end;
+        margin: 0 8% 0 0;
+    }
+    .cer-container .cer-header::after{
+        content: "";
+        position: absolute;
+        height: 5px;
+        background-color: black;
+        left: 0;
+        bottom: 0;
+    }
+    .cer-container .cer-content{
+        display: grid;
+        grid-template-columns: auto;
+        position: relative;
+        width: 90%;
+        margin: 2rem auto;
+        justify-content: center;
+    }
+    .cer-container .cer-content .cer-options{
+        display: flex;
+        flex-direction: row;
+        justify-content: top;
+        align-items: center;
+        width: fit-content;
+        padding: 5vw;
+    }
+    .cer-container .cer-content .cer-options .options{
+        font-size: 4vw;
+        width: 100%;
+        margin: 2vw 0vw;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Itim', cursive;
+        position: relative;
+        transition: .5s;
+    }
+    .cer-container .cer-content .cer-options .options::after{
+        content: "";
+        width: 0;
+        height: 5px;
+        background-color: tomato;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+    }
+    .cer-container .cer-content .cer-options .options:hover, .cer-container .cer-content .cer-options .options.activate{
+        color: tomato;
+    }
+    .cer-container .cer-content .cer-options .options:hover::after, .cer-container .cer-content .cer-options .options.activate::after{
+        content: "";
+        cursor: pointer;
+        animation: borderplus .5s ease-in-out forwards;
+    }
+    .cer-container .cer-content .cer-show{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        background-color: white;
+        padding: 5vw 0;
         border-radius: 25px;
-        overflow: hidden;
-        margin-right: 5%;
-        margin-top: 2rem;
-        visibility: hidden;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .cer-container .cer-content .cer-show .cer-block{
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .cer-container .cer-content .cer-show .cer-block.activate{
+        display: flex;
+    }
+    .cer-container .cer-content .cer-show .cer-block img{
+        width: 45vw;
+        height: auto;
+    }
+    .cer-container .cer-content .cer-show .cer-block p{
+        width: 80%;
+        padding: 10px 0;
+        font-size:4vw;
+        font-family: 'Itim', cursive;
+        
     }
 }
+

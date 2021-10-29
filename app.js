@@ -312,21 +312,47 @@ function mouseout(n){
     button.style.opacity = "0";
 }
 function activateBlock(n) {
+    let screen_width = window.innerWidth;
     var block = document.getElementsByClassName("block")[n - 1]
     var button = block.getElementsByTagName("button")[0];
     if(button.innerHTML == "More"){
         button.innerHTML = "Hide";
         block.classList.add("activate");
-        block.style.gridColumn = "span 2"
-        block.style.gridRow = "span 2"
+        if(screen_width  <= 650){
+            block.style.gridColumn = "span 1"
+            block.style.gridRow = "span 2"
+        }
+        else if(screen_width <= 780){
+            block.style.gridColumn = "span 2"
+            block.style.gridRow = "span 3"
+        }
+        else{
+            block.style.gridColumn = "span 2"
+            block.style.gridRow = "span 2"
+        }
+        
     }
     else if(button.innerHTML == "Hide"){
         button.innerHTML = "More";
         block.classList.remove("activate");
-        setTimeout(() =>{
-            block.style.gridColumn = "span 1"
-            block.style.gridRow = "span 1"
-        }, 187.5);
+        if(screen_width <= 640){
+            setTimeout(() =>{
+                block.style.gridColumn = "span 1"
+                block.style.gridRow = "span 1"
+            }, 220);
+        }
+        else if(screen_width <= 780){
+            setTimeout(() =>{
+                block.style.gridColumn = "span 1"
+                block.style.gridRow = "span 1"
+            }, 50);
+        }
+        else{
+            setTimeout(() =>{
+                block.style.gridColumn = "span 1"
+                block.style.gridRow = "span 1"
+            }, 187.5);
+        }
     }
 }
 function easingNav(clicked){
