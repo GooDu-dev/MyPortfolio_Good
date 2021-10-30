@@ -367,21 +367,21 @@ nav .link-container .link:hover a h1::after{
 .counter-container .main-project{
     display: inherit;
     flex-direction: row;
-    justify-content: space-around;
-    width: 50vw;
+    justify-content: start;
+    width: 90%;
     align-items: center;
-    margin-bottom: 2rem;
+    margin: 0 auto;
 }
 .counter-container .main-project img{
-    width: 10vw;
-    height: 10vw;
+    width: 15vw;
+    height: 15vw;
 }
 .counter-container .main-project .text{
     display: flex;
     flex-direction: row;
 }
 .counter-container .main-project .text p{
-    font-size: 3vw;
+    font-size: 5vw;
     padding-bottom: 2vw;
     padding: 1rem;
     font-weight: bolder;
@@ -394,6 +394,7 @@ nav .link-container .link:hover a h1::after{
     justify-content: space-evenly;
     align-items: center;
     grid-gap: 5vw;
+    margin-top: 5vw;
 }
 .counter-container .sub-project .counter-item{
     display: flex;
@@ -402,11 +403,11 @@ nav .link-container .link:hover a h1::after{
     align-items: center;
 }
 .counter-container .sub-project .counter-item img{
-    width: 5vw;
-    height: 5vw;
+    width: 10vw;
+    height: 10vw;
 }
 .counter-container .sub-project .counter-item p{
-    font-size: 2vw;
+    font-size: 3vw;
     font-family: 'Itim', cursive;
 }
 .counter-container .sub-project .counter-item p.num-count{
@@ -930,6 +931,61 @@ footer .link-warp img:hover{
         margin-top: 2rem;
         visibility: hidden;
     }
+
+    .counter-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .counter-container .main-project{
+        display: inherit;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 90%;
+        align-items: center;
+    }
+    .counter-container .main-project img{
+        width: 15vw;
+        height: 15vw;
+    }
+    .counter-container .main-project .text{
+        display: flex;
+        flex-direction: row;
+    }
+    .counter-container .main-project .text p{
+        font-size: 6vw;
+        padding-bottom: 2vw;
+        padding: 1rem;
+        font-weight: bolder;
+        font-family: 'Itim', cursive;
+    }
+    .counter-container .sub-project{
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(1, auto);
+        justify-content: space-evenly;
+        align-items: center;
+        grid-gap: 5vw;
+    }
+    .counter-container .sub-project .counter-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .counter-container .sub-project .counter-item img{
+        width: 10vw;
+        height: 10vw;
+    }
+    .counter-container .sub-project .counter-item p{
+        font-size: 4vw;
+        font-family: 'Itim', cursive;
+    }
+    .counter-container .sub-project .counter-item p.num-count{
+        padding: 1vw;
+    }
+
     .group-hob{
         background-color: #345da7;
         position: relative;
@@ -1388,16 +1444,15 @@ footer .link-warp img:hover{
     }
     .counter-container .main-project{
         display: inherit;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-around;
-        width: 80vw;
+        width: 90%;
         align-items: center;
-        margin-bottom: 2rem;
-        margin-left: 2rem;
+        margin: 0 auto;
     }
     .counter-container .main-project img{
-        width: 15vw;
-        height: 15vw;
+        width: 25vw;
+        height: 25vw;
     }
     .counter-container .main-project .text{
         display: flex;
@@ -1407,7 +1462,7 @@ footer .link-warp img:hover{
         align-items: center;
     }
     .counter-container .main-project .text p{
-        font-size: 5vw;
+        font-size: 6.5vw;
         padding: 2vw;
         font-weight: bolder;
         font-family: 'Itim', cursive;
@@ -1421,6 +1476,7 @@ footer .link-warp img:hover{
         justify-content: space-evenly;
         align-items: center;
         grid-gap: 5vw;
+        margin-top: 5vw;
     }
     .counter-container .sub-project .counter-item{
         display: flex;
@@ -1429,11 +1485,11 @@ footer .link-warp img:hover{
         align-items: center;
     }
     .counter-container .sub-project .counter-item img{
-        width: 10vw;
-        height: 10vw;
+        width: 20vw;
+        height: 20vw;
     }
     .counter-container .sub-project .counter-item p{
-        font-size: 4vw;
+        font-size: 5.5vw;
         font-family: 'Itim', cursive;
     }
     .counter-container .sub-project .counter-item p.num-count{
@@ -1461,16 +1517,18 @@ footer .link-warp img:hover{
         margin: 2rem auto 0;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
         background-color: #4bb4de;
         border-radius: 50px;
+        padding: 4vw 0 ;
     }
     .filter p{
-        font-size: 3.5vw;
+        font-size: 5.5vw;
         color: white;
-        padding: .5vw;
-        width: 18vw;
-        font-family: 'Itim', cursive;
+        padding: 1.5vw;
+        width: fit-content;
+        margin: 0 auto;
+        
     }
     .filter p.active{
         color: #f8d49b;
@@ -1906,16 +1964,17 @@ footer .link-warp img:hover{
         margin: 2rem auto 0;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
         background-color: #4bb4de;
         border-radius: 50px;
+        padding: 4vw 0 ;
     }
     .filter p{
-        font-size: 3vw;
+        font-size: 5.5vw;
         color: white;
-        padding: .5vw;
-        width: 15vw;
-        font-family: 'Itim', cursive;
+        padding: 1.5vw;
+        width: fit-content;
+        margin: 0 auto;
         
     }
     .filter p.active{
@@ -2158,6 +2217,236 @@ footer .link-warp img:hover{
         font-size:4vw;
         font-family: 'Itim', cursive;
         
+    }
+}
+@media only screen and (max-width : 550px){
+    .profiles{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 10rem auto;
+    }
+    .profiles .proHead{
+        display: flex;
+        justify-self: center;
+        font-size: 15vw;
+        font-style: italic;
+    }
+    .profiles .proHead.type{
+        font-family: 'Anonymous Pro', monospace;
+        font-style: normal;
+        width: 100%;
+        max-width: fit-content;
+        overflow: hidden;
+        letter-spacing: 2px;
+        border-right: 4px solid black;
+        animation: typing 2s steps(8,end) , blink .75s step-end infinite;
+    }
+    .profiles .description1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation-delay: 1s;
+    }
+    .profiles .description1 img{
+        margin-top: 5rem;
+        object-fit: cover;
+        object-position: 30%;
+        width: 90vw;
+        height: auto;
+        border-radius: 25px;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    .profiles .description1 .text1{
+        margin-top: 5vw;
+        padding-left: 0 !important;
+        visibility: hidden;
+    }
+    .profiles .description1 .text1 h1{
+        font-size: 8vw;
+    }
+    .profiles .description1 .text1 p{
+        font-size: 2vw;
+    }
+    .profiles .description1 .text1 table tr{
+        padding: 10px;
+        font-family: 'Itim', cursive;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .profiles .description1 .text1 table tr th{
+        width: 100%;
+        text-align: center;
+        font-size: 8vw;
+        
+    }
+    .profiles .description1 .text1 table tr td{
+        width: 100%;
+        margin: 10px;
+        font-size: 8vw;
+        border-top: 2px solid black;
+    }
+    .profiles .description2{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        animation-delay: 1s;
+    }
+    .profiles .description2 img{
+        width: 500px;
+        height: auto;
+        border-radius: 25px;
+        overflow: hidden;
+        margin-right: 5%;
+        margin-top: 2rem;
+        visibility: hidden;
+    }
+    .profiles .description2 .text2{
+        margin-top: 8vw;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .profiles .description2 .text2 p{
+        text-align: center;
+        font-size: 12vw;
+    }
+    .profiles .description2 .text2 hr{
+        width: 90%;
+        border-top: 2px solid black;
+    }
+    .profiles .description2 .text2 table tr{
+        padding: 10px;
+        font-family: 'Itim', cursive;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .profiles .description2 .text2 table tr th{
+        width: 100%;
+        text-align: center;
+        font-size: 7vw;
+    }
+    .profiles .description2 .text2 table tr td{
+        padding: 10px;
+        font-size: 7vw;
+    }
+
+    .counter-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .counter-container .main-project{
+        display: inherit;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 90%;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .counter-container .main-project img{
+        width: 45vw;
+        height: 45vw;
+    }
+    .counter-container .main-project .text{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .counter-container .main-project .text p{
+        font-size: 15vw;
+        padding: 2vw;
+        font-weight: bolder;
+        font-family: 'Itim', cursive;
+        width: fit-content;
+        text-align: start;
+        text-align: center;
+    }
+    .counter-container .sub-project{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(1, auto);
+        justify-content: space-evenly;
+        align-items: center;
+        grid-gap: 5vw;
+        margin-top: 10vw;
+    }
+    .counter-container .sub-project .counter-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .counter-container .sub-project .counter-item img{
+        width: 35vw;
+        height: 35vw;
+    }
+    .counter-container .sub-project .counter-item p{
+        font-size: 10vw;
+        font-family: 'Itim', cursive;
+    }
+    .counter-container .sub-project .counter-item p.num-count{
+        padding: 1vw;
+    }
+
+    .filter{
+        width: 90%;
+        position: relative;
+        text-align: center;
+        margin: 2rem auto 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        background-color: #4bb4de;
+        border-radius: 50px;
+        padding: 4vw 0 ;
+        overflow-X: scroll;
+    }
+    .filter::after{
+        content: "(scroll for more)";
+        color: wheat;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translate(50%, -10%);
+    }
+    .filter p{
+        font-size: 8vw;
+        color: white;
+        padding: 1.5vw;
+        width: fit-content;
+        margin: 0 auto;
+        
+    }
+    .filter p.active{
+        color: #f8d49b;
+        text-shadow: 0px 0px 50px #75bde0;
+        z-index: 1;
+    }
+    .filter #tab{
+        position: absolute;
+        background-color: #3b8ac4;
+        width: 15vw;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 25px;
+        transition: all .5s;
     }
 }
 

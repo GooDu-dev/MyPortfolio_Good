@@ -1,6 +1,7 @@
 var count =0;
 var Boolcount=true;
-sizeOp()
+sizeOp();
+fitErasingNavbar();
 window.onscroll = function(){
     navbar(),
     NavCheckPos(),
@@ -11,10 +12,12 @@ window.onscroll = function(){
 }
 window.ononline = function(){
     ShowOrHide(),
-    sizeOp()
+    sizeOp(),
+    fitErasingNavbar()
 }
 window.onresize = function(){
-    sizeOp()
+    sizeOp(),
+    fitErasingNavbar()
 }
 function sizeOp(){
     var home = document.getElementById("home");
@@ -26,24 +29,32 @@ var prevY = window.pageYOffset || document.documentElement.scrollTop;
 function navbar(){
     var currentY = window.pageYOffset || document.documentElement.scrollTop;
     var nav = document.getElementById("navbar");
-    var proPos = document.getElementById("proflies").offsetTop;
+    var proPos = document.getElementById("proflies").offsetTop - window.innerHeight/2;
     var toggle = document.getElementById("toggle");
     if(prevY >= currentY){
+        // * Scroll Up
         if(currentY >= proPos){
             nav.style.backgroundColor = "#13294B";
         }
-        if(window.innerHeight <= 780){
+        else{
+            nav.style.backgroundColor = "transparent";
+        }
+        if(window.innerWidth > 780){
+            nav.style.top = "0px";
+        }
+        else{
             toggle.style.right = "5%"
             nav.style.transform = "translateX(0%)";
             nav.style.top = "0px";
         }
     }
     else{
-        if(window.innerHeight > 780){
+        // * Scroll Down
+        if(window.innerWidth > 780){
             nav.style.top = "-120px";
         }
         else{
-            toggle.style.right = "5%"
+            toggle.style.right = "-20%"
             nav.style.transform = "translateX(0%)";
             nav.style.top = "0px";
         }
@@ -356,10 +367,27 @@ function activateBlock(n) {
     }
 }
 function easingNav(clicked){
+    let screen_width = window.innerWidth;
     var currentclick = document.getElementById(clicked);
     var tab = document.getElementById("tab");
-    tab.style.left = currentclick.offsetLeft +"px";
-    tab.style.width = currentclick.offsetWidth +"px";
+    if(screen_width > 780){
+        tab.style.left = currentclick.offsetLeft +"px";
+        tab.style.width = currentclick.offsetWidth +"px";
+    }
+    else{
+        tab.style.top = currentclick.offsetTop + "px";
+        tab.style.height = currentclick.offsetHeight + "px";
+        tab.style.width = currentclick.offsetWidth +"px";
+        tab.style.left = currentclick.offsetLeft + "px";
+    }
+}
+function fitErasingNavbar(){
+    let tab = document.getElementById("tab");
+    let all = document.getElementById("all")
+    tab.style.height = all.offsetHeight + "px";
+    tab.style.width = all.offsetWidth + "px";
+    tab.style.top = all.offsetTop + "px";
+    tab.style.left = all.offsetLeft + "px";
 }
 var firsttime = true;
 function runCounter(){
