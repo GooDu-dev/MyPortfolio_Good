@@ -2218,6 +2218,28 @@ footer .link-warp img:hover{
         font-family: 'Itim', cursive;
         
     }
+    
+    footer{
+        background-color: black;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 2vw;
+    }
+    footer .link-warp{
+        padding: 2vw;
+    }
+    footer .link-warp img{
+        width: 6vw;
+        height: 6vw;
+    }
+    footer .text p{
+        font-size: 3.5vw;
+    }
+    footer .text .language p{
+        font-size: 3vw;
+    }
 }
 @media only screen and (max-width : 550px){
     .profiles{
@@ -2447,6 +2469,29 @@ footer .link-warp img:hover{
         left: 0;
         border-radius: 25px;
         transition: all .5s;
+    }
+
+    footer{
+        background-color: black;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 2vw;
+    }
+    footer .link-warp{
+        padding: 5vw;
+    }
+    footer .link-warp img{
+        width: 8vw;
+        height: 8vw;
+        padding: 2.5vw;
+    }
+    footer .text p{
+        font-size: 5vw;
+    }
+    footer .text .language p{
+        font-size: 5vw;
     }
 }
 
