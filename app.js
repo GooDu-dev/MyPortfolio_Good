@@ -33,19 +33,20 @@ function navbar(){
     var toggle = document.getElementById("toggle");
     if(prevY >= currentY){
         // * Scroll Up
-        if(currentY >= proPos){
-            nav.style.backgroundColor = "#13294B";
-        }
-        else{
-            nav.style.backgroundColor = "transparent";
-        }
         if(window.innerWidth > 780){
             nav.style.top = "0px";
+            if(currentY >= proPos){
+                nav.style.backgroundColor = "#13294B";
+            }
+            else{
+                nav.style.backgroundColor = "transparent";
+            }
         }
         else{
             toggle.style.right = "5%"
             nav.style.transform = "translateX(0%)";
             nav.style.top = "0px";
+            nav.style.backgroundColor = "#13294B";
         }
     }
     else{
