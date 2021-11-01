@@ -196,19 +196,18 @@ nav .link-container .link:hover a h1::after{
     display: flex;
     flex-direction: column;
     width: 90%;
-    margin: 10rem auto;
+    margin: 10vw auto;
 }
 .profiles .proHead{
     display: flex;
     justify-self: start;
-    font-size: 120px;
+    font-size: 8vw;
     font-style: italic;
 }
 .profiles .proHead.type{
     font-family: 'Anonymous Pro', monospace;
     font-style: normal;
-    width: 100%;
-    max-width: 540px;
+    width: 38vw;
     overflow: hidden;
     letter-spacing: 2px;
     display: inline-block;
@@ -223,7 +222,7 @@ nav .link-container .link:hover a h1::after{
         width: 0px;
     }
     to{
-        width: 540px;
+        width: 38vw;
     }
 }
 @keyframes blink {
@@ -238,70 +237,67 @@ nav .link-container .link:hover a h1::after{
     display: flex;
     flex-grow: 2;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     animation-delay: 1s;
+    margin-top: 5vw;
 }
 .profiles .description1 img{
-    margin-top: 5rem;
     object-fit: cover;
     object-position: 30%;
-    width: 400px;
+    width: 35vw;
     height: auto;
     border-radius: 25px;
     overflow: hidden;
     visibility: hidden;
 }
 .profiles .description1 .text1{
-    margin-top: 5rem;
-    padding-left: 5rem;
     visibility: hidden;
 }
 .profiles .description1 .text1 h1{
-    font-size: 60px;
+    font-size: 4vw;
 }
 .profiles .description1 .text1 p{
-    font-size: 28px;
+    font-size: 2vw;
 }
 .profiles .description1 .text1 table tr{
     padding: 20px;
     font-family: 'Itim', cursive;
 }
 .profiles .description1 .text1 table tr th{
-    width: 200px;
+    width: fit-content;
     text-align: end;
-    font-size: 25px;
+    font-size: 2vw;
 }
 .profiles .description1 .text1 table tr td{
     padding: 10px;
-    font-size: 25px;
+    font-size: 2vw;
+    width: 30vw;
 }
 .profiles .description2{
     display: flex;
     flex-grow: 2;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     animation-delay: 1s;
+    margin-top: 5vw;
 }
 .profiles .description2 img{
-    width: 500px;
+    width: 35vw;
     height: auto;
     border-radius: 25px;
     overflow: hidden;
-    margin-right: 5%;
-    margin-top: 2rem;
     visibility: hidden;
 }
 .profiles .description2 .text2{
-    margin-top: 5rem;
     visibility: hidden;
 }
 .profiles .description2 .text2 h1{
-    font-size: 60px;
+    font-size: 5vw;
 }
 .profiles .description2 .text2 p{
     text-align: center;
-    font-size: 40px;
+    font-size: 4vw;
     font-family: 'Itim', cursive;
 }
 .profiles .description2 .text2 table tr{
@@ -309,13 +305,13 @@ nav .link-container .link:hover a h1::after{
     font-family: 'Itim', cursive;
 }
 .profiles .description2 .text2 table tr th{
-    width: 200px;
+    width: fit-content;
     text-align: end;
-    font-size: 25px;
+    font-size: 2vw;
 }
 .profiles .description2 .text2 table tr td{
     padding: 10px;
-    font-size: 25px;
+    font-size: 2vw;
 }
 @keyframes fadeFromLeft{
     from{
@@ -898,39 +894,171 @@ footer .link-warp img:hover{
 }
 
 @media only screen and (max-width: 1100px){
-    .profiles .description1{
+    .profiles{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        width: 90%;
+        margin: 10vw auto;
+    }
+    .profiles .proHead{
+        display: flex;
+        justify-self: start;
+        font-size: 12vw;
+        font-style: italic;
+        width: 40vw;
+    }
+    .profiles .proHead.type{
+        font-family: 'Anonymous Pro', monospace;
+        font-style: normal;
+        width: 55vw;
+        overflow: hidden;
+        letter-spacing: 2px;
+        display: inline-block;
+        white-space: nowrap;
+        border-right: 4px solid black;
+        box-sizing: border-box;
+        animation: typing 2s steps(8,end) , blink .75s step-end infinite;
+        animation-play-state: paused, paused;
+    }
+    @keyframes typing{
+        from{
+            width: 0px;
+        }
+        to{
+            width: 55vw;
+        }
+    }
+    @keyframes blink {
+        0%, 50%, 100%{ 
+            border-color: transparent ;
+        }
+        25%, 75%{ 
+            border-color: black; 
+        }
+    }
+    .profiles .description1{
+        display: flex;
+        flex-grow: 2;
+        flex-direction: row;
+        justify-content: space-evenly;
         animation-delay: 1s;
+        margin-top: 5vw;
     }
     .profiles .description1 img{
-        margin-top: 5rem;
         object-fit: cover;
         object-position: 30%;
-        width: 400px;
+        width: 35vw;
         height: auto;
         border-radius: 25px;
         overflow: hidden;
         visibility: hidden;
+    }
+    .profiles .description1 .text1{
+        visibility: hidden;
+    }
+    .profiles .description1 .text1 h1{
+        font-size: 4vw;
+    }
+    .profiles .description1 .text1 p{
+        font-size: 2vw;
+    }
+    .profiles .description1 .text1 table tr{
+        padding: 20px;
+        font-family: 'Itim', cursive;
+    }
+    .profiles .description1 .text1 table tr th{
+        width: fit-content;
+        text-align: end;
+        font-size: 3vw;
+        width: 25vw;
+    }
+    .profiles .description1 .text1 table tr td{
+        padding: 10px;
+        font-size: 3vw;
+        width: 28vw;
     }
     .profiles .description2{
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-grow: 2;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
         align-items: center;
         animation-delay: 1s;
+        margin-top: 5vw;
     }
     .profiles .description2 img{
-        width: 500px;
+        width: 45vw;
         height: auto;
         border-radius: 25px;
         overflow: hidden;
-        margin-right: 5%;
-        margin-top: 2rem;
         visibility: hidden;
+    }
+    .profiles .description2 .text2{
+        visibility: hidden;
+    }
+    .profiles .description2 .text2 h1{
+        font-size: 5vw;
+    }
+    .profiles .description2 .text2 p{
+        text-align: center;
+        font-size: 7vw;
+        font-family: 'Itim', cursive;
+        margin-top: 2.5vw;
+    }
+    .profiles .description2 .text2 table tr{
+        padding: 20px;
+        font-family: 'Itim', cursive;
+    }
+    .profiles .description2 .text2 table tr th{
+        width: fit-content;
+        text-align: end;
+        font-size: 3vw;
+        width: 25vw;
+    }
+    .profiles .description2 .text2 table tr td{
+        padding: 10px;
+        font-size: 3vw;
+        width: 50vw;
+    }
+    @keyframes fadeFromLeft{
+        from{
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    @keyframes fadeFromRight{
+        from{
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    @keyframes fadeFromTop{
+        from{
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    @keyframes fadeFromBottom{
+        from{
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
     }
 
     .counter-container{
@@ -1092,8 +1220,8 @@ footer .link-warp img:hover{
         align-items: center;
     }
     .group-hob .containerHob .block img{
-        width: 35vw;
-        height: 35vw;
+        width: 25vw;
+        height: 25vw;
         margin: 0 auto;
         transition: .75s;
         border-radius: 20%;
@@ -1332,7 +1460,7 @@ footer .link-warp img:hover{
         display: flex;
         flex-direction: column;
         width: 90%;
-        margin: 10rem auto;
+        margin: 10vw auto;
     }
     .profiles .proHead{
         display: flex;
@@ -1356,19 +1484,20 @@ footer .link-warp img:hover{
         justify-content: center;
         align-items: center;
         animation-delay: 1s;
+        margin-top: 5vw;
     }
     .profiles .description1 img{
-        margin-top: 5rem;
+        margin-top: 0vw;
         object-fit: cover;
         object-position: 30%;
-        width: 400px;
+        width: 80vw;
         height: auto;
         border-radius: 25px;
         overflow: hidden;
         visibility: hidden;
     }
     .profiles .description1 .text1{
-        margin-top: 5rem;
+        margin-top: 5vw;
         padding-left: 0 !important;
         visibility: hidden;
     }
@@ -1383,13 +1512,14 @@ footer .link-warp img:hover{
         font-family: 'Itim', cursive;
     }
     .profiles .description1 .text1 table tr th{
-        width: 200px;
+        width: fit-content;
         text-align: end;
         font-size: 4vw;
     }
     .profiles .description1 .text1 table tr td{
         padding: 10px;
         font-size: 4vw;
+        width: 45vw;
     }
     .profiles .description2{
         display: flex;
@@ -1398,18 +1528,19 @@ footer .link-warp img:hover{
         justify-content: center;
         align-items: center;
         animation-delay: 1s;
+        margin: 5vw;
     }
     .profiles .description2 img{
-        width: 500px;
+        width: 60vw;
         height: auto;
         border-radius: 25px;
         overflow: hidden;
-        margin-right: 5%;
-        margin-top: 2rem;
+        margin-right: 0;
+        margin-top: 0;
         visibility: hidden;
     }
     .profiles .description2 .text2{
-        margin-top: 5rem;
+        margin-top: 0;
         visibility: hidden;
         display: flex;
         flex-direction: column;
@@ -1418,7 +1549,8 @@ footer .link-warp img:hover{
     }
     .profiles .description2 .text2 p{
         text-align: center;
-        font-size: 5vh;
+        font-size: 8vw;
+        margin-bottom: 2vw;
     }
     .profiles .description2 .text2 hr{
         width: 90%;
@@ -1431,10 +1563,12 @@ footer .link-warp img:hover{
     .profiles .description2 .text2 table tr th{
         text-align: end;
         font-size: 4vw;
+        width: fit-content;
     }
     .profiles .description2 .text2 table tr td{
         padding: 10px;
         font-size: 4vw;
+        width: 50vw;
     }
 
     .counter-container{
