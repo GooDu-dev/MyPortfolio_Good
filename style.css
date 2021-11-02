@@ -30,7 +30,7 @@ body::-webkit-scrollbar{
     width: 50px;
     padding: .5rem .5rem 0 0;
     right: 0%;
-    z-index: 1;
+    z-index: 15;
     display: none;
 }
 nav{
@@ -45,7 +45,7 @@ nav{
     background-color: transparent;
     height: 7vw;
     transition: .5s;
-    z-index: 3;
+    z-index: 10;
 }
 nav img{
     width: auto;
@@ -1302,7 +1302,7 @@ footer .link-warp img:hover{
         top: 5%;
         right: 5%;
         padding: 0;
-        z-index: 10;
+        z-index: 15;
         width: fit-content;
         display: initial;
         transition: .25s;
@@ -1323,7 +1323,7 @@ footer .link-warp img:hover{
         background-color: #13294B;
         height: 100% !important;
         transition: .5s;
-        z-index: 1;
+        z-index: 10;
     }
     nav img{
         width: auto;
@@ -1956,6 +1956,7 @@ footer .link-warp img:hover{
         position: relative;
         align-self: flex-end;
         margin: 0 8% 0 0;
+        font-family: 'Itim', cursive;
     }
     .cer-container .cer-header::after{
         content: "";
@@ -2381,123 +2382,185 @@ footer .link-warp img:hover{
         display: flex;
         flex-direction: column;
         width: 90%;
-        margin: 10rem auto;
+        margin: 10vw auto;
     }
     .profiles .proHead{
         display: flex;
-        justify-self: center;
-        font-size: 15vw;
+        justify-self: start;
+        font-size: 12vw;
         font-style: italic;
+        width: 40vw;
     }
     .profiles .proHead.type{
         font-family: 'Anonymous Pro', monospace;
         font-style: normal;
-        width: 100%;
-        max-width: fit-content;
+        width: 60vw;
         overflow: hidden;
         letter-spacing: 2px;
+        display: inline-block;
+        white-space: nowrap;
         border-right: 4px solid black;
+        box-sizing: border-box;
         animation: typing 2s steps(8,end) , blink .75s step-end infinite;
+        animation-play-state: paused, paused;
+    }
+    @keyframes typing{
+        from{
+            width: 0px;
+        }
+        to{
+            width: 60vw;
+        }
+    }
+    @keyframes blink {
+        0%, 50%, 100%{ 
+            border-color: transparent ;
+        }
+        25%, 75%{ 
+            border-color: black; 
+        }
     }
     .profiles .description1{
         display: flex;
+        flex-grow: 2;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-evenly;
         animation-delay: 1s;
+        margin-top: 5vw;
     }
     .profiles .description1 img{
-        margin-top: 5rem;
         object-fit: cover;
         object-position: 30%;
-        width: 90vw;
+        width: 65vw;
         height: auto;
         border-radius: 25px;
         overflow: hidden;
         visibility: hidden;
     }
     .profiles .description1 .text1{
-        margin-top: 5vw;
-        padding-left: 0 !important;
         visibility: hidden;
     }
     .profiles .description1 .text1 h1{
-        font-size: 8vw;
+        font-size: 4vw;
     }
     .profiles .description1 .text1 p{
         font-size: 2vw;
     }
     .profiles .description1 .text1 table tr{
-        padding: 10px;
+        padding: 20px;
         font-family: 'Itim', cursive;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
     .profiles .description1 .text1 table tr th{
-        width: 100%;
-        text-align: center;
-        font-size: 8vw;
-        
+        width: fit-content;
+        text-align: end;
+        font-size: 5vw;
+        width: 30vw;
     }
     .profiles .description1 .text1 table tr td{
-        width: 100%;
-        margin: 10px;
-        font-size: 8vw;
-        border-top: 2px solid black;
+        padding: 10px;
+        font-size: 5vw;
+        width: 50vw;
     }
     .profiles .description2{
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-grow: 2;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
         align-items: center;
         animation-delay: 1s;
+        margin: 5vw auto 0;
     }
     .profiles .description2 img{
-        width: 500px;
+        width: 45vw;
         height: auto;
         border-radius: 25px;
         overflow: hidden;
-        margin-right: 5%;
-        margin-top: 2rem;
         visibility: hidden;
     }
     .profiles .description2 .text2{
-        margin-top: 8vw;
         visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    }
+    .profiles .description2 .text2 h1{
+        font-size: 5vw;
     }
     .profiles .description2 .text2 p{
         text-align: center;
-        font-size: 12vw;
-    }
-    .profiles .description2 .text2 hr{
-        width: 90%;
-        border-top: 2px solid black;
+        font-size: 10vw;
+        font-family: 'Itim', cursive;
+        margin-top: 2.5vw;
     }
     .profiles .description2 .text2 table tr{
-        padding: 10px;
+        padding: 0;
         font-family: 'Itim', cursive;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
     }
     .profiles .description2 .text2 table tr th{
-        width: 100%;
-        text-align: center;
-        font-size: 7vw;
+        text-align: end;
+        font-size: 4.5vw;
+        width: 35vw;
     }
     .profiles .description2 .text2 table tr td{
-        padding: 10px;
-        font-size: 7vw;
+        padding: 5px;
+        font-size: 4.5vw;
+        width: 45vw;
+    }
+    #motto{
+        display: flex;
+        flex-direction: column;
+    }
+    #motto tr{
+        display: flex;
+        flex-direction: column;
+        padding: 2vw;
+        width: fit-content;
+    }
+    #motto tr th{
+        width: 50vw;
+        text-align: start;
+        font-size: 5vw;
+    }
+    #motto tr td{
+        width: 50vw;
+        font-size: 5vw;
+    }
+    @keyframes fadeFromLeft{
+        from{
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    @keyframes fadeFromRight{
+        from{
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    @keyframes fadeFromTop{
+        from{
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    @keyframes fadeFromBottom{
+        from{
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
     }
 
     .counter-container{
@@ -2526,7 +2589,7 @@ footer .link-warp img:hover{
         align-items: center;
     }
     .counter-container .main-project .text p{
-        font-size: 10vw;
+        font-size: 8vw;
         padding: 2vw;
         font-weight: bolder;
         font-family: 'Itim', cursive;
@@ -2578,9 +2641,9 @@ footer .link-warp img:hover{
         content: "(scroll right for more)";
         color: wheat;
         position: absolute;
-        left: 0;
+        left: 50%;
         bottom: 0;
-        transform: translate(20%, -10%);
+        transform: translate(-50%, -10%);
         font-size: 4vw;
     }
     .filter p{
