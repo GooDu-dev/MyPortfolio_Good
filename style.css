@@ -41,7 +41,7 @@ nav{
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     background-color: transparent;
     height: 7vw;
     transition: .5s;
