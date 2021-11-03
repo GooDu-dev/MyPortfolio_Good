@@ -74,19 +74,19 @@ function toggleNavbar(){
     Boolcount = !Boolcount;
 }
 function NavCheckPos(){
-    var home = document.getElementById("navHome");
-    var profiles = document.getElementById("navPro");
-    var hobby = document.getElementById("navHob");
-    var act = document.getElementById("navAct");
-    var cer = document.getElementById("navCer");
-    var nav = document.getElementById("navbar");
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let home = document.getElementById("navHome");
+    let profiles = document.getElementById("navPro");
+    let hobby = document.getElementById("navHob");
+    let act = document.getElementById("navAct");
+    let cer = document.getElementById("navCer");
+    let nav = document.getElementById("navbar");
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
-    var homePos = document.getElementById("home").offsetTop;
-    var proPos = document.getElementById("proflies").offsetTop;
-    var hobPos = document.getElementById("hob").offsetTop;
-    var actPos = document.getElementById("act").offsetTop;
-    var cerPos = document.getElementById("certi").offsetTop;
+    let homePos = document.getElementById("home").offsetTop;
+    let proPos = document.getElementById("proflies").offsetTop;
+    let hobPos = document.getElementById("hob").offsetTop;
+    let actPos = document.getElementById("act").offsetTop;
+    let cerPos = document.getElementById("certi").offsetTop;
 
     if(scrollTop < proPos){
         home.classList.remove("active");
@@ -126,8 +126,7 @@ function NavCheckPos(){
         act.classList.remove("active");
         cer.classList.add("active");
     }
-    
-}
+}   
 function ShowOrHide(){
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     var typer = document.getElementById("typer");

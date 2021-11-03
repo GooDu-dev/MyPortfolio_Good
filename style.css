@@ -41,7 +41,7 @@ nav{
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     background-color: transparent;
     height: 7vw;
     transition: .5s;
@@ -68,10 +68,19 @@ nav .link-container .link{
     height: inherit;
     position: relative;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 nav .link-container .link a{
+    position: relative;
     text-decoration: none;
     color: inherit;
+    height: fit-content !important;
+    font-size: 2vw;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
 }
 nav .link-container .link a h1{
     position: relative;
@@ -85,18 +94,18 @@ nav .link-container .link:hover, nav .link-container .link.active{
     background-color: white;
     color: #13294B;
 }
-nav .link-container .link:hover a h1, nav .link-container .link.active a h1{
+nav .link-container .link:hover a, nav .link-container .link.active a{
     animation: deng .5s forwards ease-in-out;
 }
 @keyframes deng{
     0%, 100%{
-        transform: translateY(-50%);
+        transform: translateY(0);
     }
     50%{
-        transform: translateY(-100%);
+        transform: translateY(-50%);
     }
 }
-nav .link-container .link a h1::after{
+nav .link-container .link a::after{
     content: "";
     height: 0px;
     width: 100%;
@@ -105,11 +114,11 @@ nav .link-container .link a h1::after{
     left: 0%;
     background-color: #13294B;
 }
-nav .link-container .link.active a h1::after{
+nav .link-container .link.active a::after{
     content: "";
     height: 5px;
 }
-nav .link-container .link:hover a h1::after{
+nav .link-container .link:hover a::after{
     animation: height .5s forwards ease-in-out;
 }
 @keyframes height{
@@ -927,7 +936,7 @@ footer .link-warp img:hover{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         width: fit-content;
         height: inherit;
         margin-right: 1vw;
@@ -2743,6 +2752,7 @@ footer .link-warp img:hover{
         bottom: 0;
         transform: translate(-50%, -10%);
         font-size: 4vw;
+        width: fit-content;
     }
     .filter p{
         font-size: 6vw;
