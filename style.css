@@ -630,8 +630,7 @@ nav .link-container .link:hover a::after{
 .timeline-container .act-header{
     width: 80%;
     display: flex;
-    justify-content: flex-end;
-    text-align: end;
+    justify-content: end;
     margin: 0 auto;
     position: relative;
     padding: 2rem 0 2rem 0;
@@ -1926,8 +1925,7 @@ footer .link-warp img:hover{
     .timeline-container .act-header{
         width: 80%;
         display: flex;
-        justify-content: flex-end;
-        text-align: end;    
+        justify-content: end;
         margin: 0 auto;
         position: relative;
         padding: 2rem 0 2rem 0;
@@ -1936,6 +1934,8 @@ footer .link-warp img:hover{
         font-size: 10vw;
         position: relative;
         font-family: 'Itim', cursive;
+        justify-self: end;
+        width: fit-content;
     }
     .timeline-container .act-header h2::after{
         content: "";
