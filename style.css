@@ -630,7 +630,8 @@ nav .link-container .link:hover a::after{
 .timeline-container .act-header{
     width: 80%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
+    text-align: end;
     margin: 0 auto;
     position: relative;
     padding: 2rem 0 2rem 0;
@@ -866,6 +867,7 @@ footer .text p{
     color: white;
     text-align: center;
     font-size: 2vw;
+    font-family: 'Itim', cursive;
 }
 footer .text .language{
     display: flex;
@@ -875,6 +877,7 @@ footer .text .language{
 footer .text .language p{
     padding: 0 2px;
     transition: .5s;
+    font-family: 'Itim', cursive;
 }
 footer .text .language p:hover{
     color: red;
@@ -1923,7 +1926,8 @@ footer .link-warp img:hover{
     .timeline-container .act-header{
         width: 80%;
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
+        text-align: end;    
         margin: 0 auto;
         position: relative;
         padding: 2rem 0 2rem 0;
@@ -2163,9 +2167,11 @@ footer .link-warp img:hover{
     }
     footer .text p{
         font-size: 3vw;
+        font-family: 'Itim', cursive;
     }
     footer .text .language p{
         font-size: 2.75vw;
+        font-family: 'Itim', cursive;
     }
     
 }   
@@ -2479,9 +2485,11 @@ footer .link-warp img:hover{
     }
     footer .text p{
         font-size: 3.5vw;
+        font-family: 'Itim', cursive;
     }
     footer .text .language p{
         font-size: 3vw;
+        font-family: 'Itim', cursive;
     }
 }
 @media only screen and (max-width : 550px){
@@ -2796,9 +2804,11 @@ footer .link-warp img:hover{
     }
     footer .text p{
         font-size: 5vw;
+        font-family: 'Itim', cursive;
     }
     footer .text .language p{
         font-size: 5vw;
+        font-family: 'Itim', cursive;
     }
 }
 
