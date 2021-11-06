@@ -16,8 +16,7 @@ window.ononline = function(){
     fitErasingNavbar()
 }
 window.onresize = function(){
-    sizeOp(),
-    fitErasingNavbar()
+    sizeOp()
 }
 function sizeOp(){
     var home = document.getElementById("home");

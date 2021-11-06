@@ -658,7 +658,7 @@ nav .link-container .link:hover a::after{
     }
 }
 .timeline-container .timeline-block{
-    width: 50%;
+    width: 45%;
     margin: 0 auto;
     position: relative;
     display: flex;
@@ -699,7 +699,6 @@ nav .link-container .link:hover a::after{
 .timeline-container .timeline-block .image{
     width: fit-content;
     height: fit-content;
-    
     position: absolute;
     align-self: center;
     border-radius: 2vw;
@@ -720,7 +719,7 @@ nav .link-container .link:hover a::after{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 0;
+    padding: 2vw 0;
     width: 80%;
     margin: 0 auto;
 }
@@ -737,7 +736,7 @@ nav .link-container .link:hover a::after{
     align-self: flex-start;
 }
 .timeline-container .timeline-block .content .camp-details{
-    padding: 2rem 0;
+    padding: 2vw 0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -828,6 +827,8 @@ nav .link-container .link:hover a::after{
     border-radius: 25px;
     width: 70vw;
     justify-content: space-evenly;
+    border-color: whitesmoke;
+    box-shadow: 0px 0px 20px rgb(66, 64, 64);
 }
 .cer-container .cer-content .cer-show .cer-block{
     display: none;
