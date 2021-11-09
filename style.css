@@ -443,6 +443,7 @@ nav .link-container .link:hover a::after{
     justify-content: space-around;
     background-color: #4bb4de;
     border-radius: 50px;
+    overflow: hidden;
 }
 .filter p{
     font-size: 3vw;
@@ -464,7 +465,7 @@ nav .link-container .link:hover a::after{
     height: 100%;
     top: 0;
     left: 0;
-    border-radius: 25px;
+    border-radius: 0;
     transition: all .5s;
 }
 .group-hob .containerHob{
@@ -847,7 +848,7 @@ nav .link-container .link:hover a::after{
 .cer-container .cer-content .cer-show .cer-block p{
     width: 30vw;
     padding: 10px 0;
-    font-size: 1.5vw;
+    font-size: 2vw;
     font-family: 'Itim', cursive;
     
 }
@@ -1249,6 +1250,7 @@ footer .link-warp img:hover{
         justify-content: space-around;
         background-color: #4bb4de;
         border-radius: 50px;
+        overflow: hidden;
     }
     .filter p{
         font-size: 3vw;
@@ -1270,7 +1272,7 @@ footer .link-warp img:hover{
         height: 100%;
         top: 0;
         left: 0;
-        border-radius: 25px;
+        border-radius: 0px;
         transition: all .5s;
     }
     .group-hob .containerHob{
@@ -1766,6 +1768,7 @@ footer .link-warp img:hover{
         background-color: #4bb4de;
         border-radius: 50px;
         padding: 2vw 0 ;
+        overflow: hidden;
     }
     .filter p{
         font-size: 5.5vw;
@@ -1787,7 +1790,7 @@ footer .link-warp img:hover{
         height: 100%;
         top: 0;
         left: 0;
-        border-radius: 25px;
+        border-radius: 0;
         transition: all .5s;
     }
     .group-hob .containerHob{
@@ -2218,6 +2221,7 @@ footer .link-warp img:hover{
         background-color: #4bb4de;
         border-radius: 50px;
         padding: 1vw 0 ;
+        overflow: hidden;
     }
     .filter p{
         font-size: 4vw;
@@ -2239,7 +2243,7 @@ footer .link-warp img:hover{
         height: 100%;
         top: 0;
         left: 0;
-        border-radius: 25px;
+        border-radius: 0;
         transition: all .5s;
     }
     .group-hob .containerHob{
@@ -2752,6 +2756,7 @@ footer .link-warp img:hover{
         border-radius: 50px;
         padding: 2vw 0 4vw 0;
         overflow-X: scroll;
+
     }
     .filter::after{
         content: "(scroll right for more)";
