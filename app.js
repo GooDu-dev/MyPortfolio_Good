@@ -330,7 +330,7 @@ function activateBlock(n) {
         block.classList.add("activate");
         if(screen_width  <= 650){
             block.style.gridColumn = "span 1"
-            block.style.gridRow = "span 2"
+            block.style.gridRow = "span 3"
         }
         else if(screen_width <= 780){
             block.style.gridColumn = "span 2"
@@ -370,8 +370,10 @@ function easingNav(clicked){
     var currentclick = document.getElementById(clicked);
     var tab = document.getElementById("tab");
     if(screen_width > 780){
-        tab.style.left = currentclick.offsetLeft +"px";
+        tab.style.top = currentclick.offsetTop + "px";
+        tab.style.height = currentclick.offsetHeight + "px";
         tab.style.width = currentclick.offsetWidth +"px";
+        tab.style.left = currentclick.offsetLeft + "px";
     }
     else{
         tab.style.top = currentclick.offsetTop + "px";
