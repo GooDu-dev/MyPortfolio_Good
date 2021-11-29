@@ -940,7 +940,7 @@ footer .link-warp img:hover{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         width: fit-content;
         height: inherit;
         margin-right: 1vw;
@@ -954,8 +954,9 @@ footer .link-warp img:hover{
         color: white;
     }
     nav .link-container .link a{
-        text-decoration: none;
-        color: inherit;
+        width: fit-content;
+        padding: 0 10%; 
+        font-size: 3vw;
     }
     nav .link-container .link a h1{
         position: relative;
@@ -969,8 +970,8 @@ footer .link-warp img:hover{
         background-color: white;
         color: #13294B;
     }
-    nav .link-container .link:hover a h1, nav .link-container .link.active a h1{
-        animation: deng .5s forwards ease-in-out;
+    nav .link-container .link:hover a, nav .link-container .link.active a{
+        animation: deng .5s ease-in-out;
     }
     @keyframes deng{
         0%, 100%{
@@ -980,20 +981,20 @@ footer .link-warp img:hover{
             transform: translateY(-100%);
         }
     }
-    nav .link-container .link a h1::after{
+    nav .link-container .link a::after{
         content: "";
         height: 0px;
         width: 100%;
         position: absolute;
-        bottom: -50%;
+        bottom: -20%;
         left: 0%;
         background-color: #13294B;
     }
-    nav .link-container .link.active a h1::after{
+    nav .link-container .link.active a::after{
         content: "";
         height: 5px;
     }
-    nav .link-container .link:hover a h1::after{
+    nav .link-container .link:hover a::after{
         animation: height .5s forwards ease-in-out;
     }
     @keyframes height{
@@ -1459,7 +1460,7 @@ footer .link-warp img:hover{
         list-style: none;
         padding: 2rem 0;
         transition: .5s;
-        width: 100% !important;
+        width: 100%;
         height: fit-content;
         position: relative;
         text-align: center;
@@ -1468,13 +1469,13 @@ footer .link-warp img:hover{
     nav .link-container .link a{
         text-decoration: none;
         color: inherit;
-        width: inherit;
+        width: fit-content;
     }
     nav .link-container .link a h1{
         position: relative;
         color: inherit;
         text-decoration: none;
-        font-size: 5vw;
+        font-size: 15vw;
         width: fit-content;
         margin: 0 auto;
     }
@@ -2502,6 +2503,82 @@ footer .link-warp img:hover{
     }
 }
 @media only screen and (max-width : 550px){
+    nav{
+        position: fixed;
+        top: 0;
+        left: 100%;
+        transform: translateX(0%);
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #13294B;
+        height: 100% !important;
+        transition: .5s;
+        z-index: 10;
+    }
+    nav img{
+        width: auto;
+        height: 20vw;
+        padding: 0 0;
+    }
+    nav .link-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: 50%;
+        margin-right: 0;
+        margin-bottom: 1vw;
+    }
+    nav .link-container .link{
+        list-style: none;
+        padding: 2rem 0;
+        transition: .5s;
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    nav .link-container .link a{
+        text-decoration: none;
+        color: inherit;
+        width: fit-content;
+        font-size: 6vw;
+    }
+    nav .link-container .link a h1{
+        position: relative;
+        color: inherit;
+        text-decoration: none;
+        font-size: 15vw;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    nav .link-container .link:hover, nav .link-container .link.active{
+        background-color: white;
+        color: #13294B;
+    }
+    nav .link-container .link:hover a, nav .link-container .link.active a{
+        animation: deng .5s forwards ease-in-out;
+    }
+    nav .link-container .link a::after{
+        content: "";
+        height: 0px;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        bottom: -10%;
+        transform: translateX(-50%);
+        background-color: #13294B;
+    }
+    nav .link-container .link.active a::after{
+        content: "";
+        height: 5px;
+    }
+
     .profiles{
         display: flex;
         flex-direction: column;
