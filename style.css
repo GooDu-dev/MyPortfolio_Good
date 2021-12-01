@@ -512,7 +512,7 @@ nav .link-container .link:hover a::after{
     width: 35vw;
     height: 38vw;
     transition: .75s;
-    justify-content: center;
+    justify-content: start;
     border-radius: 10%;
 }
 .group-hob .containerHob .block.activate::after{
@@ -534,10 +534,11 @@ nav .link-container .link:hover a::after{
     border-radius: 20%;
 }
 .group-hob .containerHob .block.activate img{
-    margin: 2vw auto;
+    margin: 2.5% auto;
     transition: .75s;
     object-fit: cover;
     object-position: center;
+    box-shadow: 0px 0px 20px black;
 }
 .group-hob .containerHob .block .content{
     display: none;
@@ -567,6 +568,7 @@ nav .link-container .link:hover a::after{
     width: 3vw;
     height: 3vw;
     margin: 0;
+    box-shadow: 0px 0px 20px transparent;
 }
 .group-hob .containerHob .block button{
     position: absolute;
@@ -746,6 +748,7 @@ nav .link-container .link:hover a::after{
     font-size: 3vw;
     text-align: center;
     font-family: 'Itim', cursive;
+    color: rgb(19, 168, 128);
 }
 .timeline-container .timeline-block .content .camp-details p.details{
     font-size: 2vw;
@@ -928,7 +931,7 @@ footer .link-warp img:hover{
         align-items: center;
         background-color: transparent;
         height: 10vw;
-        transition: .5s;
+        transition: .25s;
         z-index: 10;
     }
     nav img{
@@ -2053,6 +2056,7 @@ footer .link-warp img:hover{
         font-size: 7vw;
         text-align: center;
         font-family: 'Itim', cursive;
+        color: rgb(19, 168, 128);
     }
     .timeline-container .timeline-block .content .camp-details p.details{
         font-size: 4vw;

@@ -51,7 +51,7 @@ function navbar(){
     else{
         // * Scroll Down
         if(window.innerWidth > 780){
-            nav.style.top = "-120px";
+            nav.style.top = '-200px';
         }
         else{
             toggle.style.right = "-20%"
